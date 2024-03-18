@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-03-17T15:27:42.355Z</updated>
+  <updated>2024-03-18T16:04:09.914Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>东湖酒楼·粤菜（罗冲围店）</title>
+    <link href="http://example.com/2024/03/19/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E23-%E4%B8%9C%E6%B9%96%E9%85%92%E6%A5%BC-%E7%B2%A4%E8%8F%9C%EF%BC%88%E7%BD%97%E5%86%B2%E5%9B%B4%E5%BA%97%EF%BC%89/"/>
+    <id>http://example.com/2024/03/19/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E23-%E4%B8%9C%E6%B9%96%E9%85%92%E6%A5%BC-%E7%B2%A4%E8%8F%9C%EF%BC%88%E7%BD%97%E5%86%B2%E5%9B%B4%E5%BA%97%EF%BC%89/</id>
+    <published>2024-03-18T16:00:53.000Z</published>
+    <updated>2024-03-18T16:04:09.914Z</updated>
+    
+    <content type="html"><![CDATA[<p>挺不错的粤菜馆，很适合去吃早茶，不过唯二的两个缺点，一是人太多，要去排队，不过大多数都是当地的老人去，确实是本地人认可的餐馆，二是环境有点太广式了。</p><p>打分的话，7&#x2F;10</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;挺不错的粤菜馆，很适合去吃早茶，不过唯二的两个缺点，一是人太多，要去排队，不过大多数都是当地的老人去，确实是本地人认可的餐馆，二是环境有点太广式了。&lt;/p&gt;
+&lt;p&gt;打分的话，7&amp;#x2F;10&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Stay Alone" scheme="http://example.com/categories/Stay-Alone/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>《餐饮品牌塑造》</title>
     <link href="http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E4%B9%A6%E7%B1%8D-12-%E9%A4%90%E9%A5%AE%E5%93%81%E7%89%8C%E5%A1%91%E9%80%A0/"/>
     <id>http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E4%B9%A6%E7%B1%8D-12-%E9%A4%90%E9%A5%AE%E5%93%81%E7%89%8C%E5%A1%91%E9%80%A0/</id>
     <published>2024-03-17T15:17:57.000Z</published>
-    <updated>2024-03-17T15:27:42.355Z</updated>
+    <updated>2024-03-18T16:04:19.075Z</updated>
     
     <content type="html"><![CDATA[<p>一看标题，理论上应该奇怪，为什么我会看这种书？但事实上，我确实热衷于跨行业看书，并且我还自认为在这本书里学到了一些对我后面自己做项目的东西，以下是一些分享记录。</p><p>首先是讲了中国国内的餐饮行业现状，主要聚焦在三线城市及以上的，平均客单价在50-200的连锁餐饮领域。</p><p>然后讲了品牌的强大力量，带来的优势是什么，相关的考虑是什么。</p><p>最后分几个角度（定位，文案，视觉设计，菜品，审计）讲了讲怎么做餐饮品牌。</p><p>最后我对我自己的那个独游的项目又有了新的想法，玩法核心当然还是走游戏设计的那套方法论，但是在游戏包装，包括文案，美术设计等方面，有必要从品牌的角度来考虑，而不是单单把视角局限在一个游戏项目上，或者更准确的说是，什么包装更能具有一种独特的调性，这种调性能够去成为一系列游戏的共同设计语言，让玩家去形成管性。</p><p>在这个基础上我做了独游的初版美术风格设定，与一些方向上的定调。如果项目能做出来，再来结合项目分享。</p>]]></content>
     
@@ -34,6 +58,8 @@
     
     
     
+    <category term="句号" scheme="http://example.com/categories/%E5%8F%A5%E5%8F%B7/"/>
+    
     
   </entry>
   
@@ -42,7 +68,7 @@
     <link href="http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-12-%E5%91%A8%E5%A4%84%E9%99%A4%E4%B8%89%E5%AE%B3/"/>
     <id>http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-12-%E5%91%A8%E5%A4%84%E9%99%A4%E4%B8%89%E5%AE%B3/</id>
     <published>2024-03-17T15:08:02.000Z</published>
-    <updated>2024-03-17T15:16:52.865Z</updated>
+    <updated>2024-03-18T16:01:53.112Z</updated>
     
     <content type="html"><![CDATA[<p>台湾的剧情片，镜头调度比较工整，节奏安排上还行，高潮处的处理很不错，虽然可能是因为略微有一点摸到大陆审核边缘的原因，但是作为全篇的点睛之笔确实是把眼睛给画好了。</p><p>评分的话，7&#x2F;10。</p>]]></content>
     
@@ -56,6 +82,8 @@
     
     
     
+    <category term="句号" scheme="http://example.com/categories/%E5%8F%A5%E5%8F%B7/"/>
+    
     
   </entry>
   
@@ -64,7 +92,7 @@
     <link href="http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-11-%E6%B2%99%E4%B8%982/"/>
     <id>http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-11-%E6%B2%99%E4%B8%982/</id>
     <published>2024-03-17T15:07:40.000Z</published>
-    <updated>2024-03-17T15:15:03.461Z</updated>
+    <updated>2024-03-18T16:01:49.804Z</updated>
     
     <content type="html"><![CDATA[<p>先说结论，《沙丘2》我只能给到5&#x2F;10分。</p><p>虽然沙丘的服化道，视听都还不错，即使是汉斯季默还在搞那套吵得一批的配乐之外，其他地方的镜头感肯定是有的。</p><p>但是剧情和节奏感觉非常的拉胯，剧情主打一个脑子有病，有一种未开化的纯真，槽点实在是太多，数不过来那种。然后整体的节奏非常的怪，电影在这么长的时长下，该啰嗦的啰嗦，该扣细节的没有，当然另外一个可能是这个逼设定就有大问题，没法拍那些该拍的东西。</p><p>短板，尤其是第一观感上的超级短板，导致了我只能给到5分的评价。</p>]]></content>
     
@@ -78,6 +106,8 @@
     
     
     
+    <category term="句号" scheme="http://example.com/categories/%E5%8F%A5%E5%8F%B7/"/>
+    
     
   </entry>
   
@@ -86,7 +116,7 @@
     <link href="http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-10-%E5%B9%B4%E4%BC%9A%E4%B8%8D%E8%83%BD%E5%81%9C/"/>
     <id>http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-10-%E5%B9%B4%E4%BC%9A%E4%B8%8D%E8%83%BD%E5%81%9C/</id>
     <published>2024-03-17T15:07:21.000Z</published>
-    <updated>2024-03-17T15:10:53.216Z</updated>
+    <updated>2024-03-18T16:01:44.032Z</updated>
     
     <content type="html"><![CDATA[<p>一部我还挺喜欢的片子，剧情驱动力很强，中间的几个包袱安排的很巧妙，尤其是中间点名的一段，整个电影院的人都在笑，感觉是我好久没有碰到的情况了，抛开后面的剧情为了做大方向而做大方向之外，其他地方的节奏安排非常干练，心流体验很不错。</p><p>打个分的话，8.5&#x2F;10</p>]]></content>
     
@@ -98,6 +128,8 @@
       
     
     
+    
+    <category term="句号" scheme="http://example.com/categories/%E5%8F%A5%E5%8F%B7/"/>
     
     
   </entry>
@@ -443,30 +475,6 @@
     
     
     <category term="Stay Alone" scheme="http://example.com/categories/Stay-Alone/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>231209之短言</title>
-    <link href="http://example.com/2023/12/09/%E6%97%A5%E5%BF%9722-231209%E4%B9%8B%E7%9F%AD%E8%A8%80/"/>
-    <id>http://example.com/2023/12/09/%E6%97%A5%E5%BF%9722-231209%E4%B9%8B%E7%9F%AD%E8%A8%80/</id>
-    <published>2023-12-08T16:03:19.000Z</published>
-    <updated>2023-12-08T16:57:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>就在昨天，《空洞骑士》苦痛之路，156达成。</p><p>一方面可能圈外人很难想象这句话背后的传奇，另一方面我也最多只能算个半个圈内人，不过我还是想要记录这份传奇与感动。</p><p>空洞骑士作为截止2023年，在类硬核恶魔城这一个游戏分类中的最高峰，其速通一直是热门项目。而空洞骑士的速通主要有三个大类，战斗类（包括五门，四五，modboss等），通关类（any%，trueEnd，112%等），跑酷类（苦痛之路，白宫等）</p><p>苦痛之路，the path of pain，是全游戏中作为隐藏关卡的最难跑酷，而顶级玩家对于其速通的开发，是一路辉煌与传奇。</p><h1 id="stool：荆棘skip：2分09秒"><a href="#stool：荆棘skip：2分09秒" class="headerlink" title="stool：荆棘skip：2分09秒"></a>stool：荆棘skip：2分09秒</h1><p>玩家第一次触碰到tas的极限边界，也是第一次的sub2:10，stool是首位将荆棘skip运用到速通的玩家，并借此斩获世界第一。</p><h1 id="Schy：旋风斩下落：2分06秒"><a href="#Schy：旋风斩下落：2分06秒" class="headerlink" title="Schy：旋风斩下落：2分06秒"></a>Schy：旋风斩下落：2分06秒</h1><p>顶级优化大师，优化了流程中非常多的执行细节，并开发出了旋风斩加速下落的套路，斩获世界第一。令人惋惜的是，该玩家已经由于中暑而离世。</p><h1 id="纸鸢恭贺：tss：1分59秒"><a href="#纸鸢恭贺：tss：1分59秒" class="headerlink" title="纸鸢恭贺：tss：1分59秒"></a>纸鸢恭贺：tss：1分59秒</h1><p>虽然因为后续的作弊视频消号退圈了，但是她确实是第一个将双劈电锯skip运用到速通，并把苦痛之路速通带入到2分以内的人。在荆棘skip，反身荆棘skip后，人类进一步拿下tas策略。</p><h1 id="翼侯：tss-tasr2：1分56秒"><a href="#翼侯：tss-tasr2：1分56秒" class="headerlink" title="翼侯：tss + tasr2：1分56秒"></a>翼侯：tss + tasr2：1分56秒</h1><p>r2 tas策略，我没记错的话，全房间只有22帧的容错，外星人级别的精准操作，太夸张了。但是因为这两个逆天技巧都做出来了，导致翼侯没稳住情绪，后面有一些失误。</p><h1 id="wszOwO：tss-tasr2：1分55秒"><a href="#wszOwO：tss-tasr2：1分55秒" class="headerlink" title="wszOwO：tss + tasr2：1分55秒"></a>wszOwO：tss + tasr2：1分55秒</h1><p>现在的世界记录保持者，在成功用出tss + tasr2的同时，还几乎完美的跑完了前三个房间，我很难想象人类还能有进一步的前进了。</p><p>这就是速通，我虽然没有跑过空洞的速通，但是跑过蔚蓝的速通，summit大概是全球200名左右的水平，不算厉害，但是确实切身体会过其中的滋味。</p><p>以最优化策略制定路线，以最精准操作执行，是对一个游戏最终热爱的表达，是人的意志的体现。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;就在昨天，《空洞骑士》苦痛之路，156达成。&lt;/p&gt;
-&lt;p&gt;一方面可能圈外人很难想象这句话背后的传奇，另一方面我也最多只能算个半个圈内人，不过我还是想要记录这份传奇与感动。&lt;/p&gt;
-&lt;p&gt;空洞骑士作为截止2023年，在类硬核恶魔城这一个游戏分类中的最高峰，其速通一直是热门项</summary>
-      
-    
-    
-    
-    <category term="我怀念的" scheme="http://example.com/categories/%E6%88%91%E6%80%80%E5%BF%B5%E7%9A%84/"/>
     
     
   </entry>
