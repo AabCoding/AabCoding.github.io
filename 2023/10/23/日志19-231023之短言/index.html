@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="最近有这么一件事，还挺值得记录的。 就我们公司开了一个内部的比赛，相当于是游戏的创意大赛，四人以内为一组，写一个项目书或者demo出来做展示，然后第一轮选入围，入围的组奖励4k，然后第二轮多一个汇报，来讲这个项目的具体情况。第一名好像是50k，第二名30k，第三名10k？然后还有一些小奖。 钱到不是重点，我主要是想说人。 我们部门最近都非常忙，基本上属于是腾不出精力来做这些事的。但是我们部门还是有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="231023之短言">
+<meta property="og:url" content="http://example.com/2023/10/23/%E6%97%A5%E5%BF%9719-231023%E4%B9%8B%E7%9F%AD%E8%A8%80/index.html">
+<meta property="og:site_name" content="ABA的缓存地">
+<meta property="og:description" content="最近有这么一件事，还挺值得记录的。 就我们公司开了一个内部的比赛，相当于是游戏的创意大赛，四人以内为一组，写一个项目书或者demo出来做展示，然后第一轮选入围，入围的组奖励4k，然后第二轮多一个汇报，来讲这个项目的具体情况。第一名好像是50k，第二名30k，第三名10k？然后还有一些小奖。 钱到不是重点，我主要是想说人。 我们部门最近都非常忙，基本上属于是腾不出精力来做这些事的。但是我们部门还是有">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-10-23T14:49:28.000Z">
+<meta property="article:modified_time" content="2023-10-23T15:25:34.000Z">
+<meta property="article:author" content="ABA">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/10/23/%E6%97%A5%E5%BF%9719-231023%E4%B9%8B%E7%9F%AD%E8%A8%80/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>231023之短言 | ABA的缓存地</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ABA的缓存地" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ABA的缓存地</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/23/%E6%97%A5%E5%BF%9719-231023%E4%B9%8B%E7%9F%AD%E8%A8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          231023之短言
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-10-23 22:49:28 / 修改时间：23:25:34" itemprop="dateCreated datePublished" datetime="2023-10-23T22:49:28+08:00">2023-10-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%88%91%E6%80%80%E5%BF%B5%E7%9A%84/" itemprop="url" rel="index"><span itemprop="name">我怀念的</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>最近有这么一件事，还挺值得记录的。</p>
+<p>就我们公司开了一个内部的比赛，相当于是游戏的创意大赛，四人以内为一组，写一个项目书或者demo出来做展示，然后第一轮选入围，入围的组奖励4k，然后第二轮多一个汇报，来讲这个项目的具体情况。第一名好像是50k，第二名30k，第三名10k？然后还有一些小奖。</p>
+<p>钱到不是重点，我主要是想说人。</p>
+<p>我们部门最近都非常忙，基本上属于是腾不出精力来做这些事的。但是我们部门还是有一个文案一个人为一组，最后砍下了第一名。</p>
+<p>这个事就非常的，恐怖。</p>
+<p>首先是这个人的项目，全部是一个人做，然后时间非常的赶，因为我们部门最近加班太多了。听他自己说，他第二轮的汇报，那80页ppt，是两天做完的，我自己评估了一下，给我从零来做，可能要一周，还要非常全神贯注才行。</p>
+<p>然后这个人，是现在我们文案的产出核心，按我们主策的话说，少了这个人，我们文案产能降低1&#x2F;3，美术产能降低1&#x2F;3。与此同时，他还在兼顾做另外一个组项目里面的的文案工作。</p>
+<p>与此同时，这个人还是B站的游戏区up主，播放量最高的视频过百万，日常会对某几个游戏上传攻略视频和专栏，游戏理解相当到位的同时，更新频率不低。</p>
+<p>更进一步的，这个人晚上下班之后还要上课，有一些绘画和建模的课程。</p>
+<p>就，我是难得的入行之后感觉到差距的地方，就之前的很多地方，我会认为技术的缺陷是可以学习的，认知的缺陷是可以追赶的，经验的缺陷是可以弥补的。但是我第一次感受到这种，驱动力上的差距。</p>
+<p>我和很多上班的朋友聊天，聊下来一个普遍的感受是，精力跟不上，之前初高中的时候，早8晚12随便整，但是一到上班，单纯的早9晚9都很难顶得住。我曾经一度认为是自己锻炼少了，所以加高了锻炼的频率，但是实践下来，效果一般，甚至会折腾得更累。</p>
+<p>我手上的项目其实是不少的，抛开公司的正常工作，第一个是自己的博客更新，主要在四个专栏上：日常杂谈，餐厅记录，文娱锐评，工作拓展。第二个是B站的视频更新（上班后鸽了超级多的新建文件夹）。第三个是自己的独游项目，这个受限于我新电脑还没买，所以还在找灵感的阶段。第四个是学习，这个是我很小的时候搞出来的回旋镖，就我当年读书的时候看我爹妈在家歇逼看电视玩手机，我锐评为下班了就不能终生学习一下吗，现在这个回旋镖回头了，我也算是摁着头皮在学一些有的没的。</p>
+<p>但是四个项目开展得都，不是很顺利。博客更新频率的降低是肉眼可见的，B站视频的空文件夹一大堆。主要我感觉的问题就是，下班后的乏力感，下班真是一个太好的说辞了，下班了就该休息是一个看起来就非常正确的逻辑。</p>
+<p>但是最近想来，还是不对，下班如果是为了休息，那就变成了下班时为了上班，这就有点本末倒置了，上班是为了下班的逻辑才对，所以，期待下班后的自由时间，并且驱动时间来完成自己的项目，才是有生活的感觉，而不是纯纯的上班机器人。</p>
+<p>总的来说，保持持续思考，保持持续产出。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/10/22/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-8-%E6%B2%B3%E8%BE%B9%E7%9A%84%E9%94%99%E8%AF%AF/" rel="prev" title="河边的错误">
+      <i class="fa fa-chevron-left"></i> 河边的错误
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/10/27/%E6%97%A5%E5%BF%9720-231027%E4%B9%8B%E7%9F%AD%E8%A8%80/" rel="next" title="231027之短言">
+      231027之短言 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ABA"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ABA</p>
+  <div class="site-description" itemprop="description">业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ABA</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("04/0129/2023 00:00:00"); 
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

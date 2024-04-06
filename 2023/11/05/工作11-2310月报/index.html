@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一.工作产出与计划1.本月工作重点与成果产出（一）在工作产出上（1）无限塔系统设计，跟进开发，调优（2）周活动系统设计，跟进开发（3）他人信息系统设计，跟进开发（4）组队副本，遗物副本系统设计（5）一些交互优化调整（6）副本，无限塔战力-投放数值搭建与配置，跑流程，新手期调优（7）七日目标，日常，周活动的数值搭建与配置（8）一些数值工具（直线，曲线差值器）的制作（二）在个人提升上（1）调整了几版数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2310月报">
+<meta property="og:url" content="http://example.com/2023/11/05/%E5%B7%A5%E4%BD%9C11-2310%E6%9C%88%E6%8A%A5/index.html">
+<meta property="og:site_name" content="ABA的缓存地">
+<meta property="og:description" content="一.工作产出与计划1.本月工作重点与成果产出（一）在工作产出上（1）无限塔系统设计，跟进开发，调优（2）周活动系统设计，跟进开发（3）他人信息系统设计，跟进开发（4）组队副本，遗物副本系统设计（5）一些交互优化调整（6）副本，无限塔战力-投放数值搭建与配置，跑流程，新手期调优（7）七日目标，日常，周活动的数值搭建与配置（8）一些数值工具（直线，曲线差值器）的制作（二）在个人提升上（1）调整了几版数">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-04T16:07:49.000Z">
+<meta property="article:modified_time" content="2023-11-04T16:11:34.000Z">
+<meta property="article:author" content="ABA">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/11/05/%E5%B7%A5%E4%BD%9C11-2310%E6%9C%88%E6%8A%A5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>2310月报 | ABA的缓存地</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ABA的缓存地" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ABA的缓存地</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/05/%E5%B7%A5%E4%BD%9C11-2310%E6%9C%88%E6%8A%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2310月报
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-11-05 00:07:49 / 修改时间：00:11:34" itemprop="dateCreated datePublished" datetime="2023-11-05T00:07:49+08:00">2023-11-05</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Till-the-End/" itemprop="url" rel="index"><span itemprop="name">Till the End</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一-工作产出与计划"><a href="#一-工作产出与计划" class="headerlink" title="一.工作产出与计划"></a>一.工作产出与计划</h1><h2 id="1-本月工作重点与成果产出"><a href="#1-本月工作重点与成果产出" class="headerlink" title="1.本月工作重点与成果产出"></a>1.本月工作重点与成果产出</h2><p>（一）在工作产出上<br>（1）无限塔系统设计，跟进开发，调优<br>（2）周活动系统设计，跟进开发<br>（3）他人信息系统设计，跟进开发<br>（4）组队副本，遗物副本系统设计<br>（5）一些交互优化调整<br>（6）副本，无限塔战力-投放数值搭建与配置，跑流程，新手期调优<br>（7）七日目标，日常，周活动的数值搭建与配置<br>（8）一些数值工具（直线，曲线差值器）的制作<br>（二）在个人提升上<br>（1）调整了几版数值，对新手期的数值有一些感受，对应积累了一些比较常用的工具模型<br>（2）上个月着重去了解了一下UX设计相关的东西，主要在字体分类和平设风格两块上，主要还是多看，多积累灵感。</p>
+<h2 id="2-下月工作重点与开展思路"><a href="#2-下月工作重点与开展思路" class="headerlink" title="2.下月工作重点与开展思路"></a>2.下月工作重点与开展思路</h2><p>（1）无限塔的buff优化，先用数值的方式尝试体验一下，不行再在系统上的表现层做做文章<br>（2）数值调整，现在游戏的同伴，技能的数值占比有点太过了，数值下放有点严重，需要有一些对应的调整<br>（3）周活动，测试，验收，配置，周活动还算是一个支撑中期养成循环很重要的一个系统，需要体验，评价感受<br>（4）其他系统验收，准备测试<br>（5）组队副本，遗物副本开发跟进</p>
+<h1 id="二-总结与思路沉淀"><a href="#二-总结与思路沉淀" class="headerlink" title="二.总结与思路沉淀"></a>二.总结与思路沉淀</h1><h2 id="1-思路与复盘（回顾目标、梳理问题、分析原因、总结经验）"><a href="#1-思路与复盘（回顾目标、梳理问题、分析原因、总结经验）" class="headerlink" title="1.思路与复盘（回顾目标、梳理问题、分析原因、总结经验）"></a>1.思路与复盘（回顾目标、梳理问题、分析原因、总结经验）</h2><p>最近不管是自己做系统，数值，或者是玩别的游戏，都有一个感受特别明显，就是很多时候，我们不是在找一个各方面最优的解决方案，而是在找一个能够相对平衡的解决方案。单拿数值出来的举例，有很多组关系需要去兼顾：玩家的前期与中期，活跃玩家与R，养成模块与养成模块，投放与回收，维度很多。里面也会有一些自我矛盾的东西，比方说前期的数值大量下放肯定是给玩家的刺激更强的，但是对其他系统和长线养成的感受肯定也是破坏性的，所以数值小程度刺激的度的把控，就需要很平衡。目前的做法的话，是先把需要满足的一些特征+总规划列出来，特征的话主要是性价曲线的一些重要节点，还有就是模块之间的比例变化。规划主要就是具体的玩家层次里面需要的数值。做出了一版数值再回来看这些列举出来的点是不是能够兼顾到。</p>
+<p>那么一个与之对应的感受就是，很多时候玩别的游戏会感觉，什么什么地方设计得挺差的，那么一个需要进一步思考的是，这个地方设计得差，是因为策划本身没有想到更好的解决方案，还是说策划也有一些其他的方案，但是为了兼顾另外更加全局的方面，不得不在这个地方做了取舍呢？自己感受下来，比起“我体验到了不爽的地方，我觉得这个地方设计得不对。”这种考虑方式，更好的方式是“我体验到不爽的地方，对应到游戏的哪一个具体的系统&#x2F;数值模型，策划这么设计的本意是什么？是什么导致了策划想给予玩家的体验没有传达到，同时导致了一些新的问题，那么是解决这些新的问题好，还是直接修改整个设计好？”</p>
+<p>磨合这些平衡的过程才是系统&#x2F;数值真正开始调优的过程。</p>
+<p>上一版的伙伴技能这条养成线，体验下来有一点问题，主要是数值给得太多了，我自己评估下来主要是有这么几个原因：</p>
+<p>（1）养成这个系统的操作太简便了，装备，背饰系统对应的养成规则都需要玩家投入更多的时间和精力，所以单从精力这一个资源来说，技能伙伴的性价比碾压其他系统了</p>
+<p>（2）技能伙伴的数值给玩家的提升感受是多轮的，抽取&#x3D;获得新技能伙伴，升级，技能伙伴大师，图鉴，相当于有四轮战力提高的感知，玩家的关注度会被拉得很高</p>
+<p>前面两个原因是规则上的表现，是一个玩家行为导致的，但是不是核心，最后一个原因是重要的。</p>
+<p>（3）前期钻石超发，给这个系统提速过多了。</p>
+<p>我自己后面看数据，前七天超发的钻石+广告+闯关活动奖券，给两边的抽奖一共折算出了接近两万抽，相当于耗尽了这个系统给活跃玩家大约100天的进度。但是另一方面，第一版的数值钻石是不贬值的，抽数：战力投放是几乎线性的，相当于没有性价比的衰弱，只有被本身乘区的稀释，所以释放出的数值还是比较恐怖的。主要要吸取的一个经验是，做数值还是要有一些全局思维，不要只盯着单个系统的规则来看，超发的问题本质上是，没有立足点的定了活跃玩家每一天的抽数（定得太少了），导致钻石价值太高了。所以做数值还是要去做好全局的判断，尤其是资源的全局流向，投放与回收两端，都需要去密切关注。</p>
+<p>然后是上个月研究UX的一些感受，作为策划就只是讲一些关于交互上的东西，一些美术上的东西（字体，艺术风格）就不赘述了。交互上的话，上个月的积累主要是在一些排版上，相对来说有两个比较重要的东西，一个是要注重版面的层级关系，这个需要去多积累，尤其是现在做小程序的竖屏游戏，竖屏的排版能去参考的东西就很少，如果沿用一些横屏游戏的排版其实是很奇怪的。另一个是各个版面的一致性，因为现在球球没有单独的UE来看所有的案子，所以做系统案子的时候可能出现各做个的，一些很相似的系统做了不一样的交互逻辑，所以可能多去看看别的策划做的大的系统的排版，相互参考，统一一些基础的交互逻辑，还是很有必要的。</p>
+<p>最后一个点是，感觉还是要多玩游戏，不管是自己做的游戏，还是竞品游戏，还是说一些其他分类的游戏，都需要花精力花时间去玩。玩自己的游戏才会发现需要优化的地方，玩其他的游戏对一些系统，生态的理解才更加接近真实的情况。</p>
+<h2 id="2-想法或建议（团队协作、产品版本、业务方向与进度）"><a href="#2-想法或建议（团队协作、产品版本、业务方向与进度）" class="headerlink" title="2.想法或建议（团队协作、产品版本、业务方向与进度）"></a>2.想法或建议（团队协作、产品版本、业务方向与进度）</h2><p>无</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/11/03/%E7%94%9F%E6%B4%BB5-%E7%81%AB%E4%B8%8E%E7%81%B0%E7%83%AC/" rel="prev" title="火与灰">
+      <i class="fa fa-chevron-left"></i> 火与灰
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/11/14/%E7%94%9F%E6%B4%BB6-%E7%94%9F%E7%97%85%EF%BC%8C%E5%8E%BB%E4%B8%AD%E5%BF%83%E5%8C%96%E4%B8%8E%E6%9C%AA%E6%9D%A5/" rel="next" title="生病，去中心化与未来">
+      生病，去中心化与未来 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E5%B7%A5%E4%BD%9C%E4%BA%A7%E5%87%BA%E4%B8%8E%E8%AE%A1%E5%88%92"><span class="nav-number">1.</span> <span class="nav-text">一.工作产出与计划</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9C%AC%E6%9C%88%E5%B7%A5%E4%BD%9C%E9%87%8D%E7%82%B9%E4%B8%8E%E6%88%90%E6%9E%9C%E4%BA%A7%E5%87%BA"><span class="nav-number">1.1.</span> <span class="nav-text">1.本月工作重点与成果产出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%8B%E6%9C%88%E5%B7%A5%E4%BD%9C%E9%87%8D%E7%82%B9%E4%B8%8E%E5%BC%80%E5%B1%95%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">2.下月工作重点与开展思路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E6%80%BB%E7%BB%93%E4%B8%8E%E6%80%9D%E8%B7%AF%E6%B2%89%E6%B7%80"><span class="nav-number">2.</span> <span class="nav-text">二.总结与思路沉淀</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%80%9D%E8%B7%AF%E4%B8%8E%E5%A4%8D%E7%9B%98%EF%BC%88%E5%9B%9E%E9%A1%BE%E7%9B%AE%E6%A0%87%E3%80%81%E6%A2%B3%E7%90%86%E9%97%AE%E9%A2%98%E3%80%81%E5%88%86%E6%9E%90%E5%8E%9F%E5%9B%A0%E3%80%81%E6%80%BB%E7%BB%93%E7%BB%8F%E9%AA%8C%EF%BC%89"><span class="nav-number">2.1.</span> <span class="nav-text">1.思路与复盘（回顾目标、梳理问题、分析原因、总结经验）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%83%B3%E6%B3%95%E6%88%96%E5%BB%BA%E8%AE%AE%EF%BC%88%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E3%80%81%E4%BA%A7%E5%93%81%E7%89%88%E6%9C%AC%E3%80%81%E4%B8%9A%E5%8A%A1%E6%96%B9%E5%90%91%E4%B8%8E%E8%BF%9B%E5%BA%A6%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">2.想法或建议（团队协作、产品版本、业务方向与进度）</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ABA"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ABA</p>
+  <div class="site-description" itemprop="description">业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ABA</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("04/0129/2023 00:00:00"); 
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

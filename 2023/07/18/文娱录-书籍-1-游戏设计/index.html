@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="书名：《游戏设计》出版社：清华大学出版社背景介绍：从公司借的书，似乎是网易游戏学院出版的给他们内部培训用的书，不过也对外发售了，《游戏设计》是这个系列（网易游戏学院-游戏研发入门系列丛书）里的第一本，后面应该会把其他册里面我觉得优先级高的也看了。 先讲讲架构，一共四个大章，第一章讲游戏开发者的责任，锐评为网易写这个至少比腾讯写有点道理，不过暂时没啥意义，国内的话自有送审的来负责，后面三章分别按照游">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《游戏设计》">
+<meta property="og:url" content="http://example.com/2023/07/18/%E6%96%87%E5%A8%B1%E5%BD%95-%E4%B9%A6%E7%B1%8D-1-%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="ABA的缓存地">
+<meta property="og:description" content="书名：《游戏设计》出版社：清华大学出版社背景介绍：从公司借的书，似乎是网易游戏学院出版的给他们内部培训用的书，不过也对外发售了，《游戏设计》是这个系列（网易游戏学院-游戏研发入门系列丛书）里的第一本，后面应该会把其他册里面我觉得优先级高的也看了。 先讲讲架构，一共四个大章，第一章讲游戏开发者的责任，锐评为网易写这个至少比腾讯写有点道理，不过暂时没啥意义，国内的话自有送审的来负责，后面三章分别按照游">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-18T15:06:19.000Z">
+<meta property="article:modified_time" content="2023-07-19T15:31:00.000Z">
+<meta property="article:author" content="ABA">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/07/18/%E6%96%87%E5%A8%B1%E5%BD%95-%E4%B9%A6%E7%B1%8D-1-%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>《游戏设计》 | ABA的缓存地</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ABA的缓存地" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ABA的缓存地</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/18/%E6%96%87%E5%A8%B1%E5%BD%95-%E4%B9%A6%E7%B1%8D-1-%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《游戏设计》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-07-18 23:06:19" itemprop="dateCreated datePublished" datetime="2023-07-18T23:06:19+08:00">2023-07-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-19 23:31:00" itemprop="dateModified" datetime="2023-07-19T23:31:00+08:00">2023-07-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%A5%E5%8F%B7/" itemprop="url" rel="index"><span itemprop="name">句号</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>书名：《游戏设计》<br>出版社：清华大学出版社<br>背景介绍：从公司借的书，似乎是网易游戏学院出版的给他们内部培训用的书，不过也对外发售了，《游戏设计》是这个系列（网易游戏学院-游戏研发入门系列丛书）里的第一本，后面应该会把其他册里面我觉得优先级高的也看了。</p>
+<p>先讲讲架构，一共四个大章，第一章讲游戏开发者的责任，锐评为网易写这个至少比腾讯写有点道理，不过暂时没啥意义，国内的话自有送审的来负责，后面三章分别按照游戏市场的发展，对游戏研发提出了三个层次的需求，也就分别对应了第二章：速度，第三章：质量，第四章：差异化。</p>
+<p>第二章速度，讲游戏市场最开始是卖方市场，玩家需要的是玩到一个游戏，而不是在乎一个游戏具体好不好玩，因此如何快速推进游戏开发成为了重点，这也是游戏研发的第一个层次的需求：速度。本章主要讲了一个关键词：“策划责任制”，从具体实践来讲，书里面提出了很多的要求：<br>（1）是否愿意吃亏，责任担当<br>（2）是否对游戏存在热情<br>（3）是否明确目标方向<br>（4）是否明确设计设定，具体规则等<br>（5）能否勾画出最终预期的效果<br>（6）是否了解研发过程中的流程，环节，关系人<br>（7）是否有能力写出策划文档（格式规范，内容，需求）<br>（8）是否明确后续工作的分配<br>（9）如何确保工作分配后的产出验收流程<br>（10）是否评估风险（进度风险，兼容性风险，游戏体验风险）<br>（11）是否主动跟进后续研发<br>（12）是否主动跟进成果效果<br>（13）是否总结，沉淀，分享<br>我觉得这本书是有真东西就是从这里开始的，因为我自己第一个月的工作里面反复在上面几个点里搞崩，系统规则都没搞明白就开始优化，策划案规范不太好，框架也不全面，后续跟进不太积极，验收功能反思不足等等等等，虽然完全理解新人策划的犯错正常，但是如果早看这书一个月，是不是前两三个系统会做得更好呢？<br>这一章还讲了讲游戏的开发流程，不过这个就没啥讲的必要的。</p>
+<p>第三章质量，讲游戏市场开始慢慢拥挤，玩家不缺游戏了，缺的是好游戏，因此游戏研发有了第二个层次的需求：质量。本章从文案，玩法（战斗&#x2F;关卡），数值，系统四个方面来讲，文案的方向我就抛开不讲了，这里主要关注后面三个。</p>
+<p>玩法的方向，主要讲核心玩法的构建，包括核心机制，核心循环，基本上就是策划学院派那一套东西，然后是玩法的蓝图，这个是负责讲玩家在这个玩法里面的体验，有讲到心流啥的，然后相对重要的是书里提到需要分析竞品的游戏体验，从而做到对目标用户更清晰的刻画。最后讲到了角色设计与战斗设计，这个我觉得很吊，和一些独立游戏设计有很共同的地方，这里我也展开讲讲。<br>广义的角色设计包含了常规的战斗角色设计（英雄联盟的英雄，明日方舟的干员，星际争霸的兵种）还包括了很多只有一个角色的游戏的主人公设计（蔚蓝的玛德琳，潜水员戴夫的戴夫，空洞骑士的小骑士），在设计这些角色的过程中会遇到很多困难，其中最主要的列举在这里：<br>（1）如何让玩家有熟悉感，同时又摆脱山寨感<br>（2）如何平衡群像中不同角色的占比<br>（3）如何评估角色的价值，后续拓展空间，以及在整个游戏生命周期中的价值<br>书中给出了以下的角度来思考解决这些问题：<br>（1）核心特征：用来描述一个角色在最恶劣的展示环境下也不可被群像中的其他橘色甚至任何游戏世界角色取代的原因。这里既可以指剧情中的内容，战斗上的机制，也可以是一种视觉上的剪影特征，或者说这些在组合在一起构成了核心特质。<br>（2）能力设计：需要设计出一种共鸣感，玩家愿意去理解角色，深度掌握角色，形成沉浸感。也就是经常说的4个时间节点：5min（初印象），1h（熟悉规则，形成反馈），10h（完成自我技术优化，构成简单组合），100h（深度游戏理解，达成高光时刻）。尤其是最后一个节点我觉得是经常忽略的，我们做的游戏是可持续游玩的吗，是耐玩的吗，还是玩一下就无聊了弃坑了呢？<br>（3）角色叙事：囊括了叙事组织（故事背景）与故事产出（“传说任务”）两个点，这里解略过不讲了。<br>玩法这一个方向最后讲到了概率与技战术之前的联系，这个建议去看看尚在天国的视频，那边讲得更细一点。</p>
+<p>数值的方向，简单的讲了讲减法公式和乘法公式，书里的观点是：乘法公式是减法公式的一个退化版本，这个我不是很认可，抛开用计算作为游戏性的卡牌游戏和一些短周期的小游戏，我是比较抗拒使用减法公式的，较低的可能性导致了后续的发展弱化，尤其是在原神已经给出了乘法公式+转模这个成熟套路的情况下，减法公式显得更加局促。<br>数值这一个方向后面又讲了讲数值投放与养成，这个我是觉得在这学了也等于没有学，不如找个项目的养成规划框架看看，问问数值主策是怎么做的，而不是研究书本。</p>
+<p>系统的方向，一开始讲游戏目标的设定，然后是社交系统，然后是养成系统的搭建，最后是免费游戏的付费设计，这个呢我感觉讲得太学院了，没啥参考意义，不如来点实战。</p>
+<p>第四章差异化：游戏的质量都挺高了，怎么在一众好游戏里脱颖而出呢，差异化一词自然而然的被引入，这也是我认为现在的很多游戏缺少的一种东西：“气质”。最简单的例子就是，明日方舟放在23年五一开服可能已经凉得差不多了，但是在19年舟就是做到了和市场的差异化。可惜能看到的成功的差异化，都是已经有大量模仿者在附和的差异化，那么未来真正的差异化又在哪里呢，本书给出了三个方向：题材差异化（IP合作，开放世界，新兴包装），体验差异化（竞技，非对称竞技，沙盒，），价值差异化（二次元，乙女）。但是讲得有点太市场了，并且一想到是网易的书，网易自己拿到了最好的阴阳师二游开局，都没发展出来，我只能说我就很难相信你的东西了。<br>这章最后讲了讲游戏出海，这个也不重要，等市场部慢慢研究，至于我的独游也暂时不考虑这一环，毕竟我可承担不起出海的费用（）</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/16/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E8-HOWDY-%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF%E7%83%9F%E7%86%8F%E7%83%A4%E8%82%89-%E7%B2%BE%E9%85%BF%E9%A4%90%E5%90%A7/" rel="prev" title="HOWDY 德克萨斯烟熏烤肉 精酿餐吧">
+      <i class="fa fa-chevron-left"></i> HOWDY 德克萨斯烟熏烤肉 精酿餐吧
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/07/23/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E9-%E4%B9%9D%E4%BA%A9%E5%9C%B0%E7%89%9B%E8%82%89%E7%81%AB%E9%94%85-%E8%BD%A6%E5%9D%A1%E5%BA%97/" rel="next" title="九亩地牛肉火锅-车坡店">
+      九亩地牛肉火锅-车坡店 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ABA"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ABA</p>
+  <div class="site-description" itemprop="description">业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ABA</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("04/0129/2023 00:00:00"); 
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

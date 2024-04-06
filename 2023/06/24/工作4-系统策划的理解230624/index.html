@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="写一点最近的理解吧，感觉还是学了很多新东西 第一个是系统策划的多职位思考：这个的意思是，作为系统策划，或者说产品经理，仅仅思考一个好的系统是怎么样的是不够，其实还需要去转换角度。去程序的角度，看看这个系统的一些逻辑一些算法是不是能够在程序中做的；去美术的角度，思考风格的统一性；去测试的角度，思考系统的完备性。这里举一个我在工作中的案例，需求是做一个转换装备词条的系统，这个系统只转换词条名，但是不降">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统策划的理解230624">
+<meta property="og:url" content="http://example.com/2023/06/24/%E5%B7%A5%E4%BD%9C4-%E7%B3%BB%E7%BB%9F%E7%AD%96%E5%88%92%E7%9A%84%E7%90%86%E8%A7%A3230624/index.html">
+<meta property="og:site_name" content="ABA的缓存地">
+<meta property="og:description" content="写一点最近的理解吧，感觉还是学了很多新东西 第一个是系统策划的多职位思考：这个的意思是，作为系统策划，或者说产品经理，仅仅思考一个好的系统是怎么样的是不够，其实还需要去转换角度。去程序的角度，看看这个系统的一些逻辑一些算法是不是能够在程序中做的；去美术的角度，思考风格的统一性；去测试的角度，思考系统的完备性。这里举一个我在工作中的案例，需求是做一个转换装备词条的系统，这个系统只转换词条名，但是不降">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-23T18:48:34.000Z">
+<meta property="article:modified_time" content="2023-06-24T06:38:56.000Z">
+<meta property="article:author" content="ABA">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/06/24/%E5%B7%A5%E4%BD%9C4-%E7%B3%BB%E7%BB%9F%E7%AD%96%E5%88%92%E7%9A%84%E7%90%86%E8%A7%A3230624/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>系统策划的理解230624 | ABA的缓存地</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ABA的缓存地" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ABA的缓存地</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/24/%E5%B7%A5%E4%BD%9C4-%E7%B3%BB%E7%BB%9F%E7%AD%96%E5%88%92%E7%9A%84%E7%90%86%E8%A7%A3230624/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          系统策划的理解230624
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-24 02:48:34 / 修改时间：14:38:56" itemprop="dateCreated datePublished" datetime="2023-06-24T02:48:34+08:00">2023-06-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Till-the-End/" itemprop="url" rel="index"><span itemprop="name">Till the End</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>写一点最近的理解吧，感觉还是学了很多新东西</p>
+<p>第一个是系统策划的多职位思考：这个的意思是，作为系统策划，或者说产品经理，仅仅思考一个好的系统是怎么样的是不够，其实还需要去转换角度。去程序的角度，看看这个系统的一些逻辑一些算法是不是能够在程序中做的；去美术的角度，思考风格的统一性；去测试的角度，思考系统的完备性。这里举一个我在工作中的案例，需求是做一个转换装备词条的系统，这个系统只转换词条名，但是不降低战斗力（可以理解为原神的圣遗物评分），需要保持一定的比例来转换词条对应的属性，一般是给每个属性一个权重，例如暴击率1，暴伤率2，攻击力3，闪避率5，然后用权重进行换算就行了，但是事实在后端的计算中，除法会导致无尽小数，这里通常会进行向下取整，导致战斗力降低，并且甚至出现，重复转换词条，战斗力一直掉的情况。这里就是一个很典型的，思考的角度局限在了系统策划里面，如果很早就意识到这种可能出现的问题，那么一些相应的解决办法就能够在最开始的方案中直接给出。这也就说所谓的全局思维吧。</p>
+<p>第二个是交接的问题，策划案的重点是想一个多么有趣的系统，但是难点是怎么样把想好的系统传达给后续的开放人员，不是说自己写爽了就行，阐释开放的思路出发点，用尽可能全面而又有条理的框架整理需求，都是需要注意到的点。</p>
+<p>第三个是系统的维护，指大概总开发人数在50人左右的团队中，策划需要辅助构建后端需要的配置表，也就是自己要去完成配置需求，需要清晰的明确，哪些变量最好设置为可以更改的，哪些数据结构最好做成数组（即使现在只有一个），该系统关联的已有的配置表需要修改什么，添加什么。这些都是需要对游戏的配置有很熟悉的掌握，这个主要还是多问多记。我自己工作中的安利的话，像是增设物品获取引导上的就有：Item，GainItemWay，NewbieParagraph，NewbieStep。增设新系统的话，一般也会涉及到FunctionOpenCondition，Language，XxxRule，FunctionExplain。</p>
+<p>第四个是我在公司的内部文件看到的，我们部门主管对于面试招人的一些看重的点，这里也记一下：<br>1.自我介绍：表达能力，观点的逻辑，自我推销的能力<br>2.岗位的理解：职责，能力，价值<br>3.项目经历：方法论，认知体现，经验积累<br>4.专业能力<br>5.自我定位<br>6.我自提升，并举例：学习总结，学习意愿，学习能力，学习潜力<br>7.反问与职业期望</p>
+<p>第五个是关于游戏最前期的设计，意思是，游戏的一本道的结束时间点紧密关联游戏的目标人群。这个等我多做点测试再细说，不过对应的，白夜极光和1999的专栏就先跳过了。</p>
+<p>以上就是最近的学习总结了。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/06/24/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E5-%E7%83%9F%E7%81%AB%E6%B4%9E73%E5%8F%B7%C2%B7%E7%87%92%E9%AD%82%E7%83%A4%E8%82%89%E7%A4%BE/" rel="prev" title="烟火洞73号·燒魂烤肉社">
+      <i class="fa fa-chevron-left"></i> 烟火洞73号·燒魂烤肉社
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/07/01/%E5%B7%A5%E4%BD%9C5-2306%E6%9C%88%E6%8A%A5/" rel="next" title="2306月报">
+      2306月报 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ABA"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ABA</p>
+  <div class="site-description" itemprop="description">业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ABA</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("04/0129/2023 00:00:00"); 
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

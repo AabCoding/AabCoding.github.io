@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="一．米哈游的战略分析1．传统单机游戏厂商与二游工作室的不同困境对于传统单机游戏厂商，尤其是以3A游戏为主要产品的游戏厂商，在2010年开始面临的最大问题是，买断制这一商业化模式极大的影响了游戏的收入，尤其是在ARPU上，买断制为游戏固定了一个价格，那么游戏公司能够从单个用户上获得的收入就是固定的，即使玩家有意愿支付更多的钱，单机买断制游戏的制作公司也无法获取这部分的收入。与此同时，商业化状况良好手">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3A手游化-----从崩坏：星穹铁道剖析米哈游的游戏设计理念">
+<meta property="og:url" content="http://example.com/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/index.html">
+<meta property="og:site_name" content="ABA的缓存地">
+<meta property="og:description" content="一．米哈游的战略分析1．传统单机游戏厂商与二游工作室的不同困境对于传统单机游戏厂商，尤其是以3A游戏为主要产品的游戏厂商，在2010年开始面临的最大问题是，买断制这一商业化模式极大的影响了游戏的收入，尤其是在ARPU上，买断制为游戏固定了一个价格，那么游戏公司能够从单个用户上获得的收入就是固定的，即使玩家有意愿支付更多的钱，单机买断制游戏的制作公司也无法获取这部分的收入。与此同时，商业化状况良好手">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/1.png">
+<meta property="og:image" content="http://example.com/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/2.png">
+<meta property="og:image" content="http://example.com/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/3.png">
+<meta property="og:image" content="http://example.com/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/4.png">
+<meta property="article:published_time" content="2023-07-02T17:12:06.000Z">
+<meta property="article:modified_time" content="2023-07-30T16:17:58.000Z">
+<meta property="article:author" content="ABA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/1.png">
+
+<link rel="canonical" href="http://example.com/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>3A手游化-----从崩坏：星穹铁道剖析米哈游的游戏设计理念 | ABA的缓存地</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ABA的缓存地" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ABA的缓存地</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          3A手游化-----从崩坏：星穹铁道剖析米哈游的游戏设计理念
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-07-03 01:12:06" itemprop="dateCreated datePublished" datetime="2023-07-03T01:12:06+08:00">2023-07-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-31 00:17:58" itemprop="dateModified" datetime="2023-07-31T00:17:58+08:00">2023-07-31</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Till-the-End/" itemprop="url" rel="index"><span itemprop="name">Till the End</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一．米哈游的战略分析"><a href="#一．米哈游的战略分析" class="headerlink" title="一．米哈游的战略分析"></a>一．米哈游的战略分析</h1><h2 id="1．传统单机游戏厂商与二游工作室的不同困境"><a href="#1．传统单机游戏厂商与二游工作室的不同困境" class="headerlink" title="1．传统单机游戏厂商与二游工作室的不同困境"></a>1．传统单机游戏厂商与二游工作室的不同困境</h2><p>对于传统单机游戏厂商，尤其是以3A游戏为主要产品的游戏厂商，在2010年开始面临的最大问题是，买断制这一商业化模式极大的影响了游戏的收入，尤其是在ARPU上，买断制为游戏固定了一个价格，那么游戏公司能够从单个用户上获得的收入就是固定的，即使玩家有意愿支付更多的钱，单机买断制游戏的制作公司也无法获取这部分的收入。与此同时，商业化状况良好手游厂商，尤其是二游厂商，通过概率抽卡的方式，完美的在商业化中实现了价格歧视，而手游厂商面临的问题是，手游内游戏性的匮乏摧毁了市场的信息，市场增速开始减缓，手游玩家的付费意愿也开始下滑。</p>
+<h2 id="2．新的解决方案：米哈游3A手游化的历程"><a href="#2．新的解决方案：米哈游3A手游化的历程" class="headerlink" title="2．新的解决方案：米哈游3A手游化的历程"></a>2．新的解决方案：米哈游3A手游化的历程</h2><p>随着技术的不断进步，游戏行业也在不断演变。新的硬件和软件技术为游戏开发带来了更多可能性，但同时也增加了开发成本和技术挑战。3A代表着高质量、高投入、高销量的新的标准，需要一定的工业化体系作为铺垫，而工业化体系是游戏产业实现整体升级，必须迈上的必经之路，在整个中国游戏产业中手游3A化，或者说以手游为主载体的跨端游戏的3A化，是更明显也更具优势的下一个发展潜在可能。<br>正是在这样的历史阶段，米哈游创造性的提出了3A手游化这一概念，大胆将3A类游戏的核心玩法进行适配性改造，并移植到手机游戏上。将崩坏学园系列中积累的资金与大部分团队all in进入了米哈游这一战略，从猎天使魔女系列，鬼泣系列等动作游戏中脱胎出了《崩坏3》，而后，又从塞尔达荒野之息，刺客信条系列等开放世界游戏中脱胎出了原神，这一次米哈游将赛道选择了回合制游戏，以轨迹系列，八方旅人，P5等优秀的主机&#x2F;PC回合制游戏为参考对象，迭代出了《崩坏：星穹铁道》（以下简称崩铁）。本文将以崩铁为主要拆解对象，深刻探讨米哈游的3A手游化这一战略下的游戏设计理念。</p>
+<h1 id="二．崩铁的拆解分析"><a href="#二．崩铁的拆解分析" class="headerlink" title="二．崩铁的拆解分析"></a>二．崩铁的拆解分析</h1><h2 id="1．总体定位：“能作为游戏游玩的连续动画作品”"><a href="#1．总体定位：“能作为游戏游玩的连续动画作品”" class="headerlink" title="1．总体定位：“能作为游戏游玩的连续动画作品”"></a>1．总体定位：“能作为游戏游玩的连续动画作品”</h2><p><img src="/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/1.png" alt="1"><br>在对崩铁进行细致拆解之前，需要先明确米哈游对崩铁这款游戏的定位，从崩铁制作人大卫的访谈中我们可以找到答案：“能作为游戏游玩的连续动画作品”和“从立项初期便确定了较为轻度＆偏运营方向的游戏品类这一方针”。其背后的逻辑也不难猜测，在米哈游的头号产品原神取得了巨大成功的背景下，米哈游的新作品就需要与原神进行一定程度的错位，以避免造成公司内的恶性竞争，因此崩铁制作组将游戏受众期待放在了更广阔的轻度玩家，甚至是尚未接触游戏，但是对精神娱乐带有需求的年轻一代。<br>在这样的背景下，崩铁一方面积极从过往的优秀游戏吸取玩法：“女神异闻录”系列，“轨迹”系列，“异度之刃”系列等基于CTB模式的回合制，《塞尔达：荒野之息》，《马里奥奥德赛》，“魂”系列等优秀的箱庭，《最后的生还者1》，《荒野大镖客2》，“战神”系列中带来沉浸式体验的电影化叙事，等等等等。另一方面，出于手游玩家受众与商业模式的考虑，米哈游在3A游戏的核心玩法上又进行了精妙的改造，使得米哈游能够工业化的长线产出精品内容。<br>在之后的内容中，本组将借用MDA模型，把崩铁拆解为三个板块：机制Mechanics，动态Dynamics，美学Aesthetics，以此解析崩铁在3A手游化的过程中对核心玩法做出的调整。</p>
+<h2 id="2．机制：系统受众所决定的系统设计"><a href="#2．机制：系统受众所决定的系统设计" class="headerlink" title="2．机制：系统受众所决定的系统设计"></a>2．机制：系统受众所决定的系统设计</h2><p>首先是机制，在本组看来，3A手游化最大的难点就是在系统层面的设计，具体体现在如何让系统兼顾硬核的3A受众和轻量化的手游受众，而我们组的结论是，米哈游区分开不同系统的核心受众，在不同系统里的进行差异化设计，很好的形成了每个系统内部的“浅水区”与“深水区”，让不同的玩家都能找到自己舒适的核心玩法。<br>在战斗系统上，而崩铁的战斗系统采用回合制的框架，战斗玩法围绕着破韧展开，具体包括：行动点数、回合拉条、弱点属性、韧性这四种机制。<br>行动点数是回合制游戏常见的一种限制玩家策略的机制，让玩家在有限的资源内做出对自己最有利的决策来获取胜利，但在实际体验中，除了极少数场景需要注意行动点数的分配，其他大部分时候都能靠养成中的数值来获取胜利，玩家有通过数值来获取胜利的可能性时，需要思考的策略就会变少，而且行动点数也从某个方面讲是数值的一部分，比如命座系统和光锥系统。<br>回合拉条在战斗中被速度和某些技能影响，可以让角色在一回合内增加或减少行动次数，这又给玩家多了一些策略点，先于敌方放技能和后于地方放技能都会在不同场景下影响战局，和行动点数的搭配也增加了玩家的决策难度。<br>弱点属性的机制给了玩家各种配队的可能性，得益于对对应属性的弱点造成伤害会获得数值（多造成一部分伤害）和机制（韧性）上的提升，玩家会的思考在手中可选择的对策卡中做出最优的搭配以应对各种场景。弱点属性的存在更多的是为了让玩家寻求拓宽自己的可选择卡池数量，这是在整个系统中除了人物本身的人设和美术外为养成系统服务的最核心机制。<br>韧性的机制给了玩家在这种简单的回合制中少有的“目标”，也是整个战斗系统循环的核心，玩家就是要通过不断的削韧或是在不同场景下的削韧来获得策略上的优势，例如打断敌人的关键技能引导，或者说一直让敌人的行动滞后，或是和己方角色的技能联动。总的来说从进入战斗开始，玩家就是围绕着削韧来思考自己的策略的。<br>这四种机制简单但却配合紧密，为了尽可能使战斗系统轻量化，在可选的回合制策略中能挑出来的最简单的组合。相较于《异度之刃2》这种带有复杂的连携系统的伪回合制战斗，以及《神界原罪2》那样引入环境、Build的硬核回合制战斗，星穹铁道在明确自己的用户群体后，阉割出了让原生手游群体感到很舒适的战斗系统，轻量化且不失策略性，很好的兼顾核心向玩家与轻量级玩家，可谓是刀法精准。<br>除开战斗系统本身的机制，崩铁的核心玩法之一：模拟宇宙也值得一提，崩铁的模拟宇宙将回合制战斗与传统肉鸽相结合，拓展了回合制战斗本身的玩法乐趣，而在这个结合的过程中，米哈游做了相当多的举措来保证玩家的体验。这里挑选两个最重要的方面进行列举说明：其一，随机性：传统肉鸽游戏的核心是就是随机性，具体分为策略随机与运气随机，前者为了给玩家提供及时的策略空间，提高游戏的策略深度，后者为模糊了游戏中的具体数值，提高了游戏的策略难度，而米哈游为了让更多的大众玩家能够在模拟宇宙中能够有优秀的游戏体验，选择了尽可能降低运气随机的占比，消除了概率的不确定性对轻量级玩家的决策造成的判断难度，尽可能的降低了游戏的进入门槛，与此同时，对于策略随机，米哈游进行了着重的设计，使其具有一定的策略性，以保证核心向的玩家有追求的空间，其二，成长性：传统肉鸽更多的是使用build来作为游戏的养成载体，而一个build中往往需要考虑几十个组件的选择，这样的策略广度对于二游玩家来说是不友好的，因此米哈游选择将其浓缩精简为流派，玩轻量级家只需要在开局选择想要发展的流派，流派与流派之间的隔阂较重，交互很少，因此轻量级玩家很自然的会堆叠单一流派，而在同一流派内，再来进一步的细化，为核心向玩家提高更高的游戏上线，这也就是所谓的，用定性策略来锚定轻量级玩家，用定量策略来锚定核心向玩家。<br><img src="/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/2.png" alt="2"><br>在养成系统上，米哈游依旧保持了如同原神一样的商业化方案：“卖角色不买养成”。换句话说，在玩家氪金点并非是数值本身，而是一种数值的可能性。玩家在获得新角色后，依旧需要对角色进行一定时间的养成，这样的设计好处在于玩家对于。崩铁的在养成系统上也继承了原神的绝大部分设计，但是仍然针对两者的差异化定位进行了一定程度的修改，这里也进行一个罗列。<br>其一是原神的养成成本问题，崩铁在数值上做了大刀阔斧的改革：一方面极大的降低了单个角色的养成成本，具体来说，原神养成一个5星角色大概28.4天，星铁一个5星大概23.8天，除此之外，二倍速，自动攻击，自动刷取等机制，都降低了玩家的养成负担。另一方面，崩铁在数值需求的设计上进一步保守化，降低了模拟宇宙，忘却之庭（同深渊）的数值需求，降低了对玩家的养成要求，鼓励玩家培养不同的角色，尝试不同的配队，体验回合制构筑的快乐，而非是如同原神一样一昧的追求数值与圣遗物，让玩家陷入反心流的游戏体验中。<br>其二是游戏中提升战力的方法较为简单，玩家获取角色养成材料的途径简单清晰。在养成上面做了减法。如和原神相比较，角色提升技能的素材和武器升级的素材都可以通过一个副本获取。相较于原神想要提升角色天赋需要到世界各个地方刷取怪物掉落素材，星穹铁道的获取方式更为直接，且玩家需要消耗的精力也更少。在材料获取方式上做的减法提升了玩家的游戏体验。<br>在探索系统上，崩铁以箱庭设计为主要的探索地图，以支线任务，碎片化叙事，地图奖励等内容为探索对象，构建了一个多层次的探索系统。这里的多层次是指，米哈游为不同类型的玩家都准备了不同类型的探索内容：对于轻量级玩家，米哈游在主线的箱庭设计尽可能简化，并通过镜头引导，怪物引导，宝箱引导等多种方式，帮助新手玩家顺利的进行第一次箱庭游戏；对于考究党，米哈游在星舰，城镇等地方暗藏文本信息，把碎片化叙事的堆料做足，既满足了考究党的探索欲，又丰富了游戏世界的立体感；对于成就党，米哈游在各大箱庭中暗藏各种小机关，附带上了解密等新的游戏环节，让成就党在追求全探索度的同时也能收获有趣的游戏体验；对于3A受众来说，米哈游的箱庭本身设计也称得上是出色，除开因为需要照顾轻度玩家导致的游戏早期箱庭相对简单，在游戏当前版本的一些自由探索向的箱庭中，“结构复用”，“call back”等3A箱庭中的经典优秀设计，也能在崩铁里看到相似影子。<br><img src="/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/3.png" alt="3"></p>
+<h2 id="3．动态：优秀的核心循环带来丰富的心流状态"><a href="#3．动态：优秀的核心循环带来丰富的心流状态" class="headerlink" title="3．动态：优秀的核心循环带来丰富的心流状态"></a>3．动态：优秀的核心循环带来丰富的心流状态</h2><p>崩铁，或者说米哈游的游戏的最大特点就是，他们摆脱了传统手机游戏在“战斗&#x2F;解密–养成”这两个板块的游戏循环，在3A手游化的战略下，创造性的将游戏的核心循环拓展为了“剧情—战斗—养成—探索”，将玩家导向了更加丰富的游戏循环中，玩家能够得到的情绪刺激形式就更加多样化。而在这个拓展的过程中，我们需要关注的是米哈游吸引泛二次元用户这样的轻量级玩家来接受这一套相对复杂化的核心循环，因此本组特意注册了崩铁的新号来研究米哈游是如何将新手玩家导入这样的循环中的，以下是崩铁第一章新手教程的主要流程梳理。<br><img src="/2023/07/03/%E5%B7%A5%E4%BD%9C6-%E5%B4%A9%E9%93%81%E5%88%86%E6%9E%90%E6%A1%88%E5%AD%90/4.png" alt="4"><br>经过上述梳理，我们可以发现几个“3A手游化”过程中的有趣设计。<br>其一，创角后置：这个算是现在的手游业内趋势，创角已经成为了一个阻碍游戏当日留存的核心要素，如果不能够在游戏的最早期（前10min甚至前5min）向玩家展现玩家想要玩到的玩法，那么游戏的早期留存数据会受到一定程度的影响。<br>其二，对新系统进行奖励：这里是指，系统的导入一定要设计好对应的导入教学环节，能够让玩家直接感受到新系统的导入帮助了玩家的战斗，而非是徒增了玩家的操作与思考。崩铁中，每一个战斗系统的导入，都设计了对应的关卡来辅助，为玩家持续提供正反馈，只要玩家正确的使用新导入的战斗系统，那么该关卡就能够非常顺利的通过，最简单的过关爽快感成为了新系统导入的最好辅助，在养成系统的导入中，就一定会给予玩家一定的养成材料让玩家培养自己的角色，获得养成与数值增长的直接乐趣，从而避免玩家在潜意识中开始理性的计算之后的养成需要花费的时间与资源成本，降低游戏的性质。<br>其三，模块之间的联动：这里是指，在以上四个模块中，需要存在相互支援的作用，例如，在剧情模块中介绍战斗的背景，对怪物和角色进行一定的展示，让玩家存在对战斗模块的期待。在战斗模块中，出色的战斗演出，也可以让玩家收获战胜敌人的成就感，并在成就感的延续下，期待剧情的进一步的发展，也就是所谓的“成为原因的快乐”，来进一步扩大战斗获胜的爽感。<br>其四，系统的开放环环相扣：从一个最小的单人队伍开始，逐步拓展到一个需要各方面养成的四人队伍在战斗中形成巧妙的配合，这个拓展的过程的体验需求是：“丝滑”，玩家需要在无意识中掌握进行游戏的能力，因此系统的开放速度就需要保持一定的速度，并且通过重复的设计，来使玩家在之后的游戏环节中反复复习自己之前被动学习到的游戏技巧，以达到玩家能够在做完游戏的新手教程后，既存在继续游戏的能力，又保持着继续游戏的惯性。<br>其五，无与伦比的剧情演出。这个应该是米哈游的独特优势，在即使12+的剧本限制下，也能够通过演出的方式，让大家对剧情的接受度不会过低，造成大范围的玩家流失，并且剧情本身也是长线游戏的核心竞争力与护城河，玩家在剧情中的经历构成了玩家在游戏中的主要回忆，这对长线留存有着重要的意义，而剧情的演出能力，则是游戏公司选择在剧情上发力的必备能力。<br>以上只是在游戏的新手部分的动态拆解，而这部分相当程度的代表了崩铁在动态构建上的成功，通过优质的四模块循环设计作为最大的框架（这也是3A游戏性的最大表现），在其中不断填入适合目标玩家的小设计（手游化的特殊设计），从而完美的执行了“3A手游化”这一战略构想。</p>
+<h2 id="4．美学：“我即主角”的背后是米哈游对玩家需求的深度理解。"><a href="#4．美学：“我即主角”的背后是米哈游对玩家需求的深度理解。" class="headerlink" title="4．美学：“我即主角”的背后是米哈游对玩家需求的深度理解。"></a>4．美学：“我即主角”的背后是米哈游对玩家需求的深度理解。</h2><p>美学所指的并非美术，而是包括美术在内的，基于早期概念设计，到游戏研发后期的包装设计，画面，音乐，文本等一系列表现，是玩家在视听上的第一印象，而米哈游在二次元这个细化赛道上做到了极致，无论是顶级的技术美术实力，还是对画师的培训形成统一的风格来控制游戏在美术上的一致性，都是在这个赛道上的其他游戏难以企及的高度。这里我们着重分析崩铁在沉浸感上的设计。<br>在传统的游戏叙事中有两种不同的沉浸感体验。第一种是“主角即我”，这个概念意味着游戏中的主角已经具有预先设定的个性和故事背景，玩家在游戏过程中则扮演这个角色，跟随其经历游戏故事，例如“巫师”系列，《荒野大镖客2》。这种沉浸感相对而言并不适合如今的手机游戏，这主要是由于以下两个原因导致的，其一，手机游戏的单词游戏时间短，更多的游戏场景是突发性的碎片化时间，而“主角即我”需要玩家代入扮演主角，这就意味着玩家需要花更多的时间成本来代入游戏，这与手游单次游戏时间短的特性是矛盾的。其二，“主角即我”需要玩家有一定的共情能力，因此这样的游戏更适合已经习惯了这个类型的游戏玩家，而不适合免费加内购制的手游对应的需要去扩大玩家范围的商业化模式。<br>第二种是“我即主角”，这个概念强调玩家在游戏中充当主角，与游戏角色完全融合，旨在让玩家充分代入角色，感受角色的情感，决策和经历。例如“上古卷轴”系列，“辐射”系列。米哈游在崩铁中选择了这样的路线，崩铁的主角在开局失忆，就是为了让玩家能够以崭新的角色开始历险。然而米哈游的“我即主角”又与传统的有一定的差别，传统的“我即主角”往往鼓励玩家在游戏中做出各种选择，让玩家感到自己掌控着游戏的发展。为了呼应玩家的行为与选择，游戏内的剧情往往有着多条分支或多个结局，而这样的设计无法在一个长线运营的手游中实现，因为手游需要保证所有的玩家都有相同的剧情进度。<br>因此崩铁的“我即主角”在传统的3A上做出了调整，其一，游戏虽然在主线对于玩家是固定的，但是崩铁的许多支线增添了可以供玩家选择的结局，且玩家的选择会导致游戏中的场景发生一定的改变，让玩家直观的感受到自己的选择发生了作用。其二，米哈游在多年的研发过程中，掌握了对于泛二次元用户精准的需求，玩家群体在崩铁里想做的事，想说的话，本质上也是玩家群体曾经在原神中做过的事，说过的话。在米哈游已有的数据沉淀加持下，崩铁才能够进一步触及玩家的底层需求，例如，在文案方面，大胆采用时下的热梗，或者是打破第四面墙的方式，拉近玩家与主角的距离。其三，很好的塑造了三月七与丹恒两位游戏伴侣，极大的调动了游戏对玩家的情绪。在主角太快歌剧般的旅行中，玩家与主角逐渐的靠近，玩家与其他的角色的交互也就更加自然，玩家就此逐渐的融入崩铁构建的世界中。<br>其四，游戏大量采用与现实挂钩的概念，例如手机通讯，丝路朋克等，以帮助轻度游戏玩家快速进入游戏氛围。其五，超量的美术规模与雄厚的技术美术，让玩家一直处于视听端的信息超载状态，在这一点上崩铁是高度看齐单机3A游戏的。</p>
+<h1 id="三．总结与思考"><a href="#三．总结与思考" class="headerlink" title="三．总结与思考"></a>三．总结与思考</h1><p>仔细梳理米哈游在崩铁上的操作,我们发现,崩铁在战斗系统统,探索系统和沉浸感设计上相较于3A的改动幅度较小,更多的是在内容的层次上做划分,在游戏内做到浅水区与深水区的渐变,而在养成系统与核心循环两个部分的改变较大,而这其中蕴含了3A手游化的核心理念:3A手游化是基于3A游戏类型对应的核心体验为框架的手游化。在不本文的例子中,崩铁是基于回合制大类的手游化,因此需要提取回合制游戏的核心玩法的共同点,尽可能的保留这部分的玩家体验,在这个基础上,再进行商业化调整与手游玩家的适配性问题。<br>其背后的框架逻辑是:以泛用户化的包装与3A游戏的核心价体验的下放为玩家的导流端,通过包装&#x2F;人设的售卖,以及不皮坏3A游戏框架下的核心体验的固定范围的数值售卖两点来作为游戏的营收端口。另一方面,3A手游化的过程中最大的难点是如何做到”形似而神不下似”,一个相对意义上的反面案例是鬼泣巅峰之战,因为过度关注鬼泣系列的独特动作战斗系统设计与鬼泣的ip,一味强调门槛过高的技能连段,而没有抓住动作游戏这个游戏大类中优秀作品的共同点,最终既没有成功的实现泛用户的倒流,另外也没有做到让玩家认可游戏的动作系统设计,商业化行为遭到了玩家群体的抵制。<br>最后来说本文没有讨论详尽,可以继续思考的地方,就是什么么样的3A是适合进行手游化的,这些3A有什么共同特点吗?抛开崩铁对应的回合制,原神对应的开放世界,崩三对应的动作类,下一个等待爆款的游戏类型有是什么呢?这将是在本文结束后我将继续思考的地方。</p>
+<h1 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h1><p>1.《为什么人们会喜欢回合制RPG？来自《女神异闻录》与《崩坏：星穹铁道》的答案》<br>2.《《星穹铁道》抢夺《原神》神位，“左右互搏”的米哈游路在何方？》<br>3.《回合制RPG是否过时，对《崩坏：星穹铁道》来说可能不是一个重要的问题》<br>4.《游戏设计浅析：我们为什么会完《星穹铁道》以及究竟在玩什么》<br>5.《《星穹铁道》牛X，但别着急吹》<br>6.《浅谈使玩家对NPC产生关心的机制设计思路》<br>7.《二次元游戏研发杂谈：内容、玩法系统与底层人性》<br>8.《游戏行业深度报告—–在科技与流量变迁中演进的游戏行业》</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/01/%E5%B7%A5%E4%BD%9C5-2306%E6%9C%88%E6%8A%A5/" rel="prev" title="2306月报">
+      <i class="fa fa-chevron-left"></i> 2306月报
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/07/03/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E6-%E5%B9%BF%E5%B7%9E%E9%85%92%E5%AE%B6-%E9%BB%84%E5%9F%94%E5%A4%A7%E9%81%93%E5%BA%97/" rel="next" title="广州酒家-黄埔大道店">
+      广州酒家-黄埔大道店 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%EF%BC%8E%E7%B1%B3%E5%93%88%E6%B8%B8%E7%9A%84%E6%88%98%E7%95%A5%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">一．米哈游的战略分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%EF%BC%8E%E4%BC%A0%E7%BB%9F%E5%8D%95%E6%9C%BA%E6%B8%B8%E6%88%8F%E5%8E%82%E5%95%86%E4%B8%8E%E4%BA%8C%E6%B8%B8%E5%B7%A5%E4%BD%9C%E5%AE%A4%E7%9A%84%E4%B8%8D%E5%90%8C%E5%9B%B0%E5%A2%83"><span class="nav-number">1.1.</span> <span class="nav-text">1．传统单机游戏厂商与二游工作室的不同困境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%EF%BC%8E%E6%96%B0%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%B1%B3%E5%93%88%E6%B8%B83A%E6%89%8B%E6%B8%B8%E5%8C%96%E7%9A%84%E5%8E%86%E7%A8%8B"><span class="nav-number">1.2.</span> <span class="nav-text">2．新的解决方案：米哈游3A手游化的历程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%EF%BC%8E%E5%B4%A9%E9%93%81%E7%9A%84%E6%8B%86%E8%A7%A3%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">二．崩铁的拆解分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%EF%BC%8E%E6%80%BB%E4%BD%93%E5%AE%9A%E4%BD%8D%EF%BC%9A%E2%80%9C%E8%83%BD%E4%BD%9C%E4%B8%BA%E6%B8%B8%E6%88%8F%E6%B8%B8%E7%8E%A9%E7%9A%84%E8%BF%9E%E7%BB%AD%E5%8A%A8%E7%94%BB%E4%BD%9C%E5%93%81%E2%80%9D"><span class="nav-number">2.1.</span> <span class="nav-text">1．总体定位：“能作为游戏游玩的连续动画作品”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%EF%BC%8E%E6%9C%BA%E5%88%B6%EF%BC%9A%E7%B3%BB%E7%BB%9F%E5%8F%97%E4%BC%97%E6%89%80%E5%86%B3%E5%AE%9A%E7%9A%84%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.2.</span> <span class="nav-text">2．机制：系统受众所决定的系统设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%EF%BC%8E%E5%8A%A8%E6%80%81%EF%BC%9A%E4%BC%98%E7%A7%80%E7%9A%84%E6%A0%B8%E5%BF%83%E5%BE%AA%E7%8E%AF%E5%B8%A6%E6%9D%A5%E4%B8%B0%E5%AF%8C%E7%9A%84%E5%BF%83%E6%B5%81%E7%8A%B6%E6%80%81"><span class="nav-number">2.3.</span> <span class="nav-text">3．动态：优秀的核心循环带来丰富的心流状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%EF%BC%8E%E7%BE%8E%E5%AD%A6%EF%BC%9A%E2%80%9C%E6%88%91%E5%8D%B3%E4%B8%BB%E8%A7%92%E2%80%9D%E7%9A%84%E8%83%8C%E5%90%8E%E6%98%AF%E7%B1%B3%E5%93%88%E6%B8%B8%E5%AF%B9%E7%8E%A9%E5%AE%B6%E9%9C%80%E6%B1%82%E7%9A%84%E6%B7%B1%E5%BA%A6%E7%90%86%E8%A7%A3%E3%80%82"><span class="nav-number">2.4.</span> <span class="nav-text">4．美学：“我即主角”的背后是米哈游对玩家需求的深度理解。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%EF%BC%8E%E6%80%BB%E7%BB%93%E4%B8%8E%E6%80%9D%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">三．总结与思考</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">参考文章：</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ABA"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ABA</p>
+  <div class="site-description" itemprop="description">业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ABA</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("04/0129/2023 00:00:00"); 
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
