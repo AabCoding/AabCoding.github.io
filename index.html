@@ -153,6 +153,307 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/%E5%B7%A5%E4%BD%9C17-2403%E6%9C%88%E6%8A%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/06/%E5%B7%A5%E4%BD%9C17-2403%E6%9C%88%E6%8A%A5/" class="post-title-link" itemprop="url">工作17-2403月报</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-04-06 23:42:33 / 修改时间：23:48:03" itemprop="dateCreated datePublished" datetime="2024-04-06T23:42:33+08:00">2024-04-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Till-the-End/" itemprop="url" rel="index"><span itemprop="name">Till the End</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一-工作产出与计划"><a href="#一-工作产出与计划" class="headerlink" title="一.工作产出与计划"></a>一.工作产出与计划</h1><h2 id="1-本月工作重点与成果产出"><a href="#1-本月工作重点与成果产出" class="headerlink" title="1.本月工作重点与成果产出"></a>1.本月工作重点与成果产出</h2><p>（一）在工作产出上<br>（1）化形系统跟进开发，验收，提优化案<br>（2）组队周本跟进开发，验收，提优化案<br>（3）组队交互提优化案<br>（4）协力之塔需求汇总，跟进开发，验收<br>（5）常规抽奖扭蛋机需求汇总，跟进开发，验收<br>（6）运营活动转盘抽奖需求汇总，跟进开发，验收<br>（7）个人信息面板优化需求汇总，跟进开发，验收<br>（8）聊天标签优化需求汇总，跟进开发，验收<br>（9）战斗伤害分类需求汇总，跟进开发，验收<br>（10）化形系统数值模型搭建，配置<br>（11）组队周本数值模型搭建，配置<br>（12）协力之塔数值模型搭建，配置<br>（13）天赋矩阵副本投放数值配置<br>（14）运营活动数值配置<br>（二）在个人提升上<br>（1）unity相关内容，不过还没有接触到lua的相关内容，感觉距离看懂工程还比较远</p>
+<h2 id="2-下月工作重点与开展思路"><a href="#2-下月工作重点与开展思路" class="headerlink" title="2.下月工作重点与开展思路"></a>2.下月工作重点与开展思路</h2><p>（1）成就标签系统需求汇总，跟进开发，验收<br>（2）异性玩法系统需求汇总，跟进开发，验收<br>（3）赠送系统需求汇总，跟进开发，验收<br>（4）后续版本的系统与数值工作</p>
+<h1 id="二-总结与思路沉淀"><a href="#二-总结与思路沉淀" class="headerlink" title="二.总结与思路沉淀"></a>二.总结与思路沉淀</h1><h2 id="1-思路与复盘（回顾目标、梳理问题、分析原因、总结经验）"><a href="#1-思路与复盘（回顾目标、梳理问题、分析原因、总结经验）" class="headerlink" title="1.思路与复盘（回顾目标、梳理问题、分析原因、总结经验）"></a>1.思路与复盘（回顾目标、梳理问题、分析原因、总结经验）</h2><p>（一）Excel中的精度丢失问题<br>在某次数值模型搭建时遇到了这么一个情况（这里换了数据，仅举例说明问题）<br>GCD( ((4.1-4.2)+1)*10 , 3 ) &#x3D; 1<br>但是理论上，GDC是取最大公因数的函数，作用于变量(9,3)应该返回3才对。也就是<br>GCD( 9 , 3 ) &#x3D; 3<br>后面发现这是一个比较典型的浮点数精度丢失的问题，简单来说就是电脑只能用二进制存储数据，而有的小数不能转化为一个有限数位的二进制，因此超过一定位数的部分会被移除，造成精度丢失，而再经过乘法，就会放大这个误差。<br>之前写C++的时候因为需要定义数据类型可能还记得，后面转python和excel之后就没在意过数据类型的问题了，所以一开始没想到这个方向，中间一度以为我的函数用错了，导致查这个问题花了一点时间。<br>解决方案相对简单，就是在小数转整数的计算过程中，加一层round函数（或者roundup&#x2F;rounddown函数）去修正丢失的精度。<br>（二）Excel中的展示问题<br>由于现在掉落基本上都走drop表，而有的时候会同时有上百个道具进入一个转盘里抽奖，因此可能导致一个格子里有很多字符。<br>这里就需要注意，Excel中在一个单元格中只能展示默认展示一定的字符长度，而这个长度是远远小于一个单元格的实际字符存储上限的（后者是32767个字符），所以需要使用类似自动换行的方式来展示全部的配置内容。<br>（三）drop配置的技巧<br>还是之前的问题，现在掉落基本上都走drop表，而有的时候会同时有上百个道具进入一个转盘里抽奖，一个转盘抽奖的权重配置会相当复杂。<br>现在我的配置方式是，将权重一定相同的道具先进行组合，例如同一个品质的矩阵核心&#x2F;符文等，将权重都统一为“%s”，然后再使用substitute函数，将“%s”统一替换为需要的函数，最后再将不同权重的道具组合进行合并。<br>这个先分组再配置权重的方式比起单个道具的分开配置再合并要方便很多，也比较利于维护与拓展。</p>
+<h2 id="2-想法或建议（团队协作、产品版本、业务方向与进度）"><a href="#2-想法或建议（团队协作、产品版本、业务方向与进度）" class="headerlink" title="2.想法或建议（团队协作、产品版本、业务方向与进度）"></a>2.想法或建议（团队协作、产品版本、业务方向与进度）</h2><p>无</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/%E5%B7%A5%E4%BD%9C16-2402%E6%9C%88%E6%8A%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/06/%E5%B7%A5%E4%BD%9C16-2402%E6%9C%88%E6%8A%A5/" class="post-title-link" itemprop="url">2402月报</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-04-06 23:42:18" itemprop="dateCreated datePublished" datetime="2024-04-06T23:42:18+08:00">2024-04-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-07 23:41:42" itemprop="dateModified" datetime="2024-04-07T23:41:42+08:00">2024-04-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Till-the-End/" itemprop="url" rel="index"><span itemprop="name">Till the End</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一-工作产出与计划"><a href="#一-工作产出与计划" class="headerlink" title="一.工作产出与计划"></a>一.工作产出与计划</h1><h2 id="1-本月工作重点与成果产出"><a href="#1-本月工作重点与成果产出" class="headerlink" title="1.本月工作重点与成果产出"></a>1.本月工作重点与成果产出</h2><p>（一）在工作产出上<br>（1）运营活动各个模块验收<br>（2）化形需求汇总，输出，跟进开发<br>（3）组队周本需求汇总，输出，跟进开发<br>（4）组队逻辑调整需求汇总，输出，跟进开发，持续迭代优化<br>（5）钻石商城需求汇总，输出<br>（6）无限塔buff调整<br>（7）聊天接入表情包<br>（8）新版潜能数值调整<br>（9）化形数值框架搭建，具体数值配置<br>（10）组队周本数值框架搭建，具体数值配置</p>
+<h2 id="2-下月工作重点与开展思路"><a href="#2-下月工作重点与开展思路" class="headerlink" title="2.下月工作重点与开展思路"></a>2.下月工作重点与开展思路</h2><p>（1）运营活动新抽奖系统需求<br>（2）常规抽奖系统需求<br>（3）协力之塔系统需求</p>
+<h1 id="二-总结与思路沉淀"><a href="#二-总结与思路沉淀" class="headerlink" title="二.总结与思路沉淀"></a>二.总结与思路沉淀</h1><h2 id="1-思路与复盘（回顾目标、梳理问题、分析原因、总结经验）"><a href="#1-思路与复盘（回顾目标、梳理问题、分析原因、总结经验）" class="headerlink" title="1.思路与复盘（回顾目标、梳理问题、分析原因、总结经验）"></a>1.思路与复盘（回顾目标、梳理问题、分析原因、总结经验）</h2><p>上个版本比较的忙，功能堆得比较多，数值上的工作量也不少，导致这个版本没有冗余需求出来，对应到这个版本的前期也比较的忙，所以就简单写写数值上的思考</p>
+<p>上个版本最重要的数值模块是化形系统，尤其是化形石（密钥与共鸣）这个子系统，做这套数值的时候我重新修改了我的工作流，新的工作流模式如下：<br>1.根据系统规则建立数学模型：确定所有的输入输出，挑选合适的特征<br>2.跟进数值规划的分层情况调整模型参数：尽可能的拟合性价比曲线，同时由特征出发考虑玩家感受是否符合预期<br>3.根据总的数值规划与已有的数值模块铆钉的定价确定等比缩放比例<br>4.数值验证：带入外网实际数值，找多个号进行验证，判断系统前期的数值感受是否符合预期<br>这套流程比较好的一点是，能够比较好的对全局数值做控制，并且做出来的模型相对来说要拟合得更好一些，少数的缺点是在前期和单个道具的价值衡量上需要更加考究。</p>
+<h2 id="2-想法或建议（团队协作、产品版本、业务方向与进度）"><a href="#2-想法或建议（团队协作、产品版本、业务方向与进度）" class="headerlink" title="2.想法或建议（团队协作、产品版本、业务方向与进度）"></a>2.想法或建议（团队协作、产品版本、业务方向与进度）</h2><p>无</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/%E6%96%87%E5%A8%B1%E5%BD%95-%E6%B8%B8%E6%88%8F-8-%E5%B0%8F%E9%A3%9E%E6%9C%BA%E5%A4%A7%E5%86%92%E9%99%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/06/%E6%96%87%E5%A8%B1%E5%BD%95-%E6%B8%B8%E6%88%8F-8-%E5%B0%8F%E9%A3%9E%E6%9C%BA%E5%A4%A7%E5%86%92%E9%99%A9/" class="post-title-link" itemprop="url">小飞机大冒险</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-04-06 23:41:37 / 修改时间：23:58:23" itemprop="dateCreated datePublished" datetime="2024-04-06T23:41:37+08:00">2024-04-06</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%A5%E5%8F%B7/" itemprop="url" rel="index"><span itemprop="name">句号</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>简单来说，大框架是类银河城，小框架是弹幕射击，很不错的结合，现在这种A+B的思路越发平凡的出现在独立游戏的一些小品级作品里了，算是个比较有意思的想象。</p>
+<p>优点：<br>1.手操乐趣极佳，战斗细节的调教打磨很到位。<br>2.综合素质很不错，完成度比较高</p>
+<p>缺点：<br>1.部分地图设计比较拉胯，尤其是集中在滑翔能力解锁之后<br>2.引导严重缺失，把一些主线的钥匙以其他游戏放支线的方式来隐藏，多少是有点变态了<br>3.跑酷小游戏设计很失败，主要是难度不匹配游戏基调，游戏环节不是不能难，但是不能难得突然，属于是心流设计的问题</p>
+<p>最后打个分的话：8.5</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-13-%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/06/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-13-%E4%BD%A0%E6%83%B3%E6%B4%BB%E5%87%BA%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BA%BA%E7%94%9F/" class="post-title-link" itemprop="url">你想活出怎样的人生</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-04-06 23:40:58" itemprop="dateCreated datePublished" datetime="2024-04-06T23:40:58+08:00">2024-04-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-07 00:25:34" itemprop="dateModified" datetime="2024-04-07T00:25:34+08:00">2024-04-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%A5%E5%8F%B7/" itemprop="url" rel="index"><span itemprop="name">句号</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>太典型的宫崎骏式电影了，奇幻的冒险+隐喻构成了电影的核心底色。</p>
+<p>不过相比于《千与千寻》《天空之城》《幽灵公主》这种，本身叙事就很能撑住的，偏商业向的电影，《你想活出怎样的人生》则更加偏向于导演本人的表达，其叙事部分相对偏少，而隐喻则占据了相当多的篇幅。</p>
+<p>而宫崎骏主要的表达则主要集中在两个方面：</p>
+<h2 id="1-对日本近代史的思考"><a href="#1-对日本近代史的思考" class="headerlink" title="1.对日本近代史的思考"></a>1.对日本近代史的思考</h2><p>一些相关的隐喻如下，不一定对，只是我个人的理解<br>外星陨石：黑船事件<br>火灾：东京大轰炸<br>塔：天皇制度<br>鹦鹉：纳粹与军国主义<br>投胎的幽灵：战争后出生的新一代日本人</p>
+<p>那么从这个开始出发，电影的这一方面的表达也就比较好懂了，日本从黑船事件，收到了西方事件的巨大冲击，走入了混乱的政治生态，幕府倒台后各方势力想要去建立日本理想国，但是地上天国只能是一瞬的初心，人的业与恶导向了纳粹与军国主义的路线，那么结束一切的现在日本，又要走向什么样的未来呢？</p>
+<h2 id="2-对自己动画生涯的回顾"><a href="#2-对自己动画生涯的回顾" class="headerlink" title="2.对自己动画生涯的回顾"></a>2.对自己动画生涯的回顾</h2><p>同样也有很多隐喻，我也把我的想法写下来<br>苍鹭：铃木敏夫<br>火美：宫崎美子<br>积木：宫崎骏之前导员的12部电影<br>红亭：应该来自宫崎骏之前的电影《红猪》<br>白色纸片：应该来自宫崎骏之前的电影《千与千寻》<br>投胎的幽灵：应该来自宫崎骏之前的电影《幽灵公主》</p>
+<p>宫崎骏被铃木敏夫和高畑勋带入业界，而后活出了自己的人生：吉卜力。总结性质的回顾了所有创作过的电影，但是同时又担忧自己离开后摇摇欲坠的吉卜力。</p>
+<p>懂了这两层的表达，那么相对来说就能够理解这部电影与其他商业化电影的区别。《你想活出怎样的人生》是借隐喻与童话来实现厚重表达与自我思考的作品，尽管在节奏安排上可能不太完美，前慢后快的编排相当程度的阻碍了观感的自然延续，但是我仍然认为这是一部还算值得一看的作品，打分的话，能给到7.5</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/04/06/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E-27-SushiHanzoPlus%E5%8D%8A%E8%97%8F%EF%BC%88IGC%E6%97%97%E8%88%B0%E5%BA%97%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -594,312 +895,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/19/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E23-%E4%B8%9C%E6%B9%96%E9%85%92%E6%A5%BC-%E7%B2%A4%E8%8F%9C-%E7%BD%97%E5%86%B2%E5%9B%B4%E5%BA%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="ABA">
-      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ABA的缓存地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/19/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E23-%E4%B8%9C%E6%B9%96%E9%85%92%E6%A5%BC-%E7%B2%A4%E8%8F%9C-%E7%BD%97%E5%86%B2%E5%9B%B4%E5%BA%97/" class="post-title-link" itemprop="url">东湖酒楼·粤菜-罗冲围店</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-19 00:00:53" itemprop="dateCreated datePublished" datetime="2024-03-19T00:00:53+08:00">2024-03-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-31 23:53:29" itemprop="dateModified" datetime="2024-03-31T23:53:29+08:00">2024-03-31</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Stay-Alone/" itemprop="url" rel="index"><span itemprop="name">Stay Alone</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>店名：东湖酒楼·粤菜 罗冲围店<br>地址：广东省广州市白云区增槎路6号<br>消费：140元左右（人均）<br>评分：7.5</p>
-<p>挺不错的粤菜馆，很适合去吃早茶，菜品都还挺不错的，不过唯二的两个缺点，一是人太多，要去排队，不过大多数都是当地的老人去，确实是本地人认可的餐馆，二是环境有点太广式了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E4%B9%A6%E7%B1%8D-12-%E9%A4%90%E9%A5%AE%E5%93%81%E7%89%8C%E5%A1%91%E9%80%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="ABA">
-      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ABA的缓存地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E4%B9%A6%E7%B1%8D-12-%E9%A4%90%E9%A5%AE%E5%93%81%E7%89%8C%E5%A1%91%E9%80%A0/" class="post-title-link" itemprop="url">《餐饮品牌塑造》</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-17 23:17:57" itemprop="dateCreated datePublished" datetime="2024-03-17T23:17:57+08:00">2024-03-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-19 00:04:19" itemprop="dateModified" datetime="2024-03-19T00:04:19+08:00">2024-03-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8F%A5%E5%8F%B7/" itemprop="url" rel="index"><span itemprop="name">句号</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>一看标题，理论上应该奇怪，为什么我会看这种书？但事实上，我确实热衷于跨行业看书，并且我还自认为在这本书里学到了一些对我后面自己做项目的东西，以下是一些分享记录。</p>
-<p>首先是讲了中国国内的餐饮行业现状，主要聚焦在三线城市及以上的，平均客单价在50-200的连锁餐饮领域。</p>
-<p>然后讲了品牌的强大力量，带来的优势是什么，相关的考虑是什么。</p>
-<p>最后分几个角度（定位，文案，视觉设计，菜品，审计）讲了讲怎么做餐饮品牌。</p>
-<p>最后我对我自己的那个独游的项目又有了新的想法，玩法核心当然还是走游戏设计的那套方法论，但是在游戏包装，包括文案，美术设计等方面，有必要从品牌的角度来考虑，而不是单单把视角局限在一个游戏项目上，或者更准确的说是，什么包装更能具有一种独特的调性，这种调性能够去成为一系列游戏的共同设计语言，让玩家去形成管性。</p>
-<p>在这个基础上我做了独游的初版美术风格设定，与一些方向上的定调。如果项目能做出来，再来结合项目分享。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-12-%E5%91%A8%E5%A4%84%E9%99%A4%E4%B8%89%E5%AE%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="ABA">
-      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ABA的缓存地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-12-%E5%91%A8%E5%A4%84%E9%99%A4%E4%B8%89%E5%AE%B3/" class="post-title-link" itemprop="url">周处除三害</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-17 23:08:02" itemprop="dateCreated datePublished" datetime="2024-03-17T23:08:02+08:00">2024-03-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-19 00:01:53" itemprop="dateModified" datetime="2024-03-19T00:01:53+08:00">2024-03-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8F%A5%E5%8F%B7/" itemprop="url" rel="index"><span itemprop="name">句号</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>台湾的剧情片，镜头调度比较工整，节奏安排上还行，高潮处的处理很不错，虽然可能是因为略微有一点摸到大陆审核边缘的原因，但是作为全篇的点睛之笔确实是把眼睛给画好了。</p>
-<p>评分的话，7&#x2F;10。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-11-%E6%B2%99%E4%B8%982/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="ABA">
-      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ABA的缓存地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/17/%E6%96%87%E5%A8%B1%E5%BD%95-%E7%94%B5%E5%BD%B1-11-%E6%B2%99%E4%B8%982/" class="post-title-link" itemprop="url">沙丘2</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-17 23:07:40" itemprop="dateCreated datePublished" datetime="2024-03-17T23:07:40+08:00">2024-03-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-19 00:01:49" itemprop="dateModified" datetime="2024-03-19T00:01:49+08:00">2024-03-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8F%A5%E5%8F%B7/" itemprop="url" rel="index"><span itemprop="name">句号</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>先说结论，《沙丘2》我只能给到5&#x2F;10分。</p>
-<p>虽然沙丘的服化道，视听都还不错，即使是汉斯季默还在搞那套吵得一批的配乐之外，其他地方的镜头感肯定是有的。</p>
-<p>但是剧情和节奏感觉非常的拉胯，剧情主打一个脑子有病，有一种未开化的纯真，槽点实在是太多，数不过来那种。然后整体的节奏非常的怪，电影在这么长的时长下，该啰嗦的啰嗦，该扣细节的没有，当然另外一个可能是这个逼设定就有大问题，没法拍那些该拍的东西。</p>
-<p>短板，尤其是第一观感上的超级短板，导致了我只能给到5分的评价。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -971,7 +966,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-count">120</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
