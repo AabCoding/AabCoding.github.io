@@ -153,6 +153,224 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/24/%E5%B7%A5%E4%BD%9C4-%E7%B3%BB%E7%BB%9F%E7%AD%96%E5%88%92%E7%9A%84%E7%90%86%E8%A7%A3230624/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/24/%E5%B7%A5%E4%BD%9C4-%E7%B3%BB%E7%BB%9F%E7%AD%96%E5%88%92%E7%9A%84%E7%90%86%E8%A7%A3230624/" class="post-title-link" itemprop="url">系统策划的理解230624</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-24 02:48:34 / 修改时间：14:38:56" itemprop="dateCreated datePublished" datetime="2023-06-24T02:48:34+08:00">2023-06-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Till-the-End/" itemprop="url" rel="index"><span itemprop="name">Till the End</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>写一点最近的理解吧，感觉还是学了很多新东西</p>
+<p>第一个是系统策划的多职位思考：这个的意思是，作为系统策划，或者说产品经理，仅仅思考一个好的系统是怎么样的是不够，其实还需要去转换角度。去程序的角度，看看这个系统的一些逻辑一些算法是不是能够在程序中做的；去美术的角度，思考风格的统一性；去测试的角度，思考系统的完备性。这里举一个我在工作中的案例，需求是做一个转换装备词条的系统，这个系统只转换词条名，但是不降低战斗力（可以理解为原神的圣遗物评分），需要保持一定的比例来转换词条对应的属性，一般是给每个属性一个权重，例如暴击率1，暴伤率2，攻击力3，闪避率5，然后用权重进行换算就行了，但是事实在后端的计算中，除法会导致无尽小数，这里通常会进行向下取整，导致战斗力降低，并且甚至出现，重复转换词条，战斗力一直掉的情况。这里就是一个很典型的，思考的角度局限在了系统策划里面，如果很早就意识到这种可能出现的问题，那么一些相应的解决办法就能够在最开始的方案中直接给出。这也就说所谓的全局思维吧。</p>
+<p>第二个是交接的问题，策划案的重点是想一个多么有趣的系统，但是难点是怎么样把想好的系统传达给后续的开放人员，不是说自己写爽了就行，阐释开放的思路出发点，用尽可能全面而又有条理的框架整理需求，都是需要注意到的点。</p>
+<p>第三个是系统的维护，指大概总开发人数在50人左右的团队中，策划需要辅助构建后端需要的配置表，也就是自己要去完成配置需求，需要清晰的明确，哪些变量最好设置为可以更改的，哪些数据结构最好做成数组（即使现在只有一个），该系统关联的已有的配置表需要修改什么，添加什么。这些都是需要对游戏的配置有很熟悉的掌握，这个主要还是多问多记。我自己工作中的安利的话，像是增设物品获取引导上的就有：Item，GainItemWay，NewbieParagraph，NewbieStep。增设新系统的话，一般也会涉及到FunctionOpenCondition，Language，XxxRule，FunctionExplain。</p>
+<p>第四个是我在公司的内部文件看到的，我们部门主管对于面试招人的一些看重的点，这里也记一下：<br>1.自我介绍：表达能力，观点的逻辑，自我推销的能力<br>2.岗位的理解：职责，能力，价值<br>3.项目经历：方法论，认知体现，经验积累<br>4.专业能力<br>5.自我定位<br>6.我自提升，并举例：学习总结，学习意愿，学习能力，学习潜力<br>7.反问与职业期望</p>
+<p>第五个是关于游戏最前期的设计，意思是，游戏的一本道的结束时间点紧密关联游戏的目标人群。这个等我多做点测试再细说，不过对应的，白夜极光和1999的专栏就先跳过了。</p>
+<p>以上就是最近的学习总结了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/24/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E5-%E7%83%9F%E7%81%AB%E6%B4%9E73%E5%8F%B7%C2%B7%E7%87%92%E9%AD%82%E7%83%A4%E8%82%89%E7%A4%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/24/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E5-%E7%83%9F%E7%81%AB%E6%B4%9E73%E5%8F%B7%C2%B7%E7%87%92%E9%AD%82%E7%83%A4%E8%82%89%E7%A4%BE/" class="post-title-link" itemprop="url">烟火洞73号·燒魂烤肉社</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-06-24 02:21:05 / 修改时间：02:25:12" itemprop="dateCreated datePublished" datetime="2023-06-24T02:21:05+08:00">2023-06-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stay-Alone/" itemprop="url" rel="index"><span itemprop="name">Stay Alone</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>店名：烟火洞73号·燒魂烤肉社<br>地址：广东省广州市黄埔大道657号美林M·LIVE天地二期西座3楼003<br>消费：169元（人均）<br>评分：6.5</p>
+<p>无趣的工业连锁店，食材本身的水平也较为普通，唯一指得一提的是店内的服务还是比较用心。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/23/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E4-BE-BRIGHT-CAFFE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ABA">
+      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ABA的缓存地">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/06/23/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E4-BE-BRIGHT-CAFFE/" class="post-title-link" itemprop="url">BE-BRIGHT-CAFFE</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-06-23 22:36:26" itemprop="dateCreated datePublished" datetime="2023-06-23T22:36:26+08:00">2023-06-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-06-24 02:16:12" itemprop="dateModified" datetime="2023-06-24T02:16:12+08:00">2023-06-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Stay-Alone/" itemprop="url" rel="index"><span itemprop="name">Stay Alone</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>店名：BE-BRIGHT-CAFFE<br>地址：广东省广州市黄埔大道东840号保利鱼珠港s4栋首层<br>消费：101元<br>评分：5.5</p>
+<p>如果是看作一个下午茶的第三空间，这里也许是一个很好的去处，但是要是只看作一个吃饭的地方，那我个人认为这里很难成为能称之为不错的餐厅。主打轻奢西式的工作餐，既没有走出工作餐的局限性，在简明之中提供的变化与丰富，又没有把套餐的概念给做出来。与此同时菜单的菜品偏少也是一个很大的短板。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/17/%E6%97%A5%E5%BF%9712-230617%E4%B9%8B%E7%9F%AD%E8%A8%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -671,249 +889,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/07/%E6%97%A5%E5%BF%9710-230607%E4%B9%8B%E7%9F%AD%E8%A8%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="ABA">
-      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ABA的缓存地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/07/%E6%97%A5%E5%BF%9710-230607%E4%B9%8B%E7%9F%AD%E8%A8%80/" class="post-title-link" itemprop="url">230607之短言</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-06-07 20:19:54" itemprop="dateCreated datePublished" datetime="2023-06-07T20:19:54+08:00">2023-06-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-23 21:10:46" itemprop="dateModified" datetime="2023-07-23T21:10:46+08:00">2023-07-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%88%91%E6%80%80%E5%BF%B5%E7%9A%84/" itemprop="url" rel="index"><span itemprop="name">我怀念的</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>结果就已经上班三天了，本来上班第一天很兴奋的写了一篇很长的博客，后面感觉博客的保密性还是不太行，有些涉密的项目可能还是主打一个难受住了。</p>
-<p>那抛开项目讲点有意思的东西</p>
-<p>一个工位在我旁边的主管居然是一位原神的命座战神，主打一个65，哈人，做我对面的文策，铁开服氪两万，这就是游戏公司吗，笑死。</p>
-<p>还有就是今天做战斗策划的人想了一套机制，他的意思是他觉得直接给数值没有什么新意，老板来了句，你这机制好复杂，玩家懒得看的，建议直接给数值，然后做系统的主管说，你要克服直接给数值的心理过不去的感觉，给我笑死了。</p>
-<p>别的好像就不太能写了，基本上讲着讲着就涉密了，不过可以讲讲我在干什么。</p>
-<p>第一天配环境，然后玩游戏，看系统文档</p>
-<p>不过确实有一说一，阅读系统文档的时候我才知道，为什么米的很多面试会这么问，只能说确实，是要阅历和水平才去得了，没啥问题，心服口服</p>
-<p>第二天就开始实践unity的一些工作流了，包括说怎么同步工程，怎么提交填的表之类的，</p>
-<p>第三天的话就开始写一些最基础的策划案了，怎么样去考虑一个系统的构成，涉及哪些方面，系统策划案子怎么写，怎么样讲明白自己的案子的内容，让其他开放的人能够了解自己所设想的系统的运作方式和呈现方式等等等等，从来没想过很简单的一个功能居然要搞这么多东西，不过也很合理，毕竟要涉及到的部门也挺多。</p>
-<p>明天的话还有个案子要出，这个案子是和另外一个人一块做，可能轻松可能麻烦，然后还有就是要去把今天的案子跟前后端和美术沟通一下，然后就该提交需求等那边做完看落实情况了。</p>
-<p>反正前期还是多看多学多做，各种环节都跑跑，顺带看看比较主流的教程。</p>
-<p>其实核心还是一句，保持思考。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/04/%E6%97%A5%E5%BF%979-230604%E4%B9%8B%E7%9F%AD%E8%A8%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="ABA">
-      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ABA的缓存地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/04/%E6%97%A5%E5%BF%979-230604%E4%B9%8B%E7%9F%AD%E8%A8%80/" class="post-title-link" itemprop="url">230604之短言</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-06-04 23:37:32" itemprop="dateCreated datePublished" datetime="2023-06-04T23:37:32+08:00">2023-06-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-23 21:13:46" itemprop="dateModified" datetime="2023-07-23T21:13:46+08:00">2023-07-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%88%91%E6%80%80%E5%BF%B5%E7%9A%84/" itemprop="url" rel="index"><span itemprop="name">我怀念的</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>搬家到广东了，顺利的话会在这里待至少两年的时间。</p>
-<p>新家我比较满意，至少位置上很舒服，我算了算从我出门到公司门口我只用10min不到的时间，相当的舒适。</p>
-<p>那么代价呢？</p>
-<p>一个是房租比较贵吧，另外一个稍微远一点的（可能要骑小电驴的距离），会便宜不少，还有就是这个房间里面东西比较少，很多东西都没有，还得自己慢慢添置，像是我现在整理的，一就需要两张桌子一把椅子，一套餐具和厨具，又是一笔开销；另一个就是网络很差，我手机开热点给电脑打舟的卡卡的，属实是有点难蚌。</p>
-<p>这两天提前到广州，我到处转了转，主要是和我亲戚到处耍了耍，中途顺带去拜访了一下我家的客户，了解了点外贸方面的东西，还挺有意思的，再顺带恰恰早茶，看看电影，只能说是，入职前的最后一段休假了。</p>
-<p>希望第一天顺利捏。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/04/%E7%94%9F%E6%B4%BB3-%E5%8D%97%E5%BC%80%EF%BC%8C%E5%8D%97%E5%BC%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="ABA">
-      <meta itemprop="description" content="业余游戏策划，混沌睡眠学教授，科学日麻爱好者，NKU数本">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ABA的缓存地">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/06/04/%E7%94%9F%E6%B4%BB3-%E5%8D%97%E5%BC%80%EF%BC%8C%E5%8D%97%E5%BC%80/" class="post-title-link" itemprop="url">南开，南开</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-06-04 17:36:47" itemprop="dateCreated datePublished" datetime="2023-06-04T17:36:47+08:00">2023-06-04</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-06-05 21:52:00" itemprop="dateModified" datetime="2023-06-05T21:52:00+08:00">2023-06-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B1%B1%E4%B8%98/" itemprop="url" rel="index"><span itemprop="name">山丘</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>不知道怎么写，也不知道要怎么去毕业。</p>
-<p>所以干脆只是祝福自己，毕业快乐。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -981,7 +960,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">142</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
