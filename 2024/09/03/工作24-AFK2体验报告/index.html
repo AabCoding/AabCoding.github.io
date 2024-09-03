@@ -20,22 +20,24 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="序这一篇专栏是之前那篇《游戏设计的战术与战略》的下篇，同样作为一周年的总结性质的认知交流，将更聚焦于数值策划的相关内容，观点不一定对，还是以交流为主。 本文将从数值的设计源头讲起，以一种类似流水线一样的形式，讲讲我对数值内容产出这一条“流水线”上各个环节的思考，同时掺杂各种市面上的游戏做例子。 底层战略做任何游戏的数值，其起点一定是基于游戏立项时的底层战略，需要明确游戏的核心受众与需要向这批受众提">
+  <meta name="description" content="本篇报告主要是首周的记录因为AFK2的付费框架与寻道有比较大的区别，因此本文的结构也与之前寻道的结构有一些区别，将围绕一些我个人感受到的比较值得注意的关键词来进行拓展 性价比 这个是目前整理出的游戏的大部分付费形式与对应的性价比，性价比从30到12这一段是比较陡的，里面很少有过度，感觉和他这个卡牌的数值框架有关系，可能就是需要去卡出两个层次来隔离。 直充 这个是统计的直充相关的内容，有两个点我比较">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数值策划的工作链路">
-<meta property="og:url" content="http://example.com/2024/08/12/%E5%B7%A5%E4%BD%9C24-%E6%95%B0%E5%80%BC%E7%AD%96%E5%88%92%E7%9A%84%E5%B7%A5%E4%BD%9C%E9%93%BE%E8%B7%AF/%E5%B7%A5%E4%BD%9C24-%E6%95%B0%E5%80%BC%E7%AD%96%E5%88%92%E7%9A%84%E5%B7%A5%E4%BD%9C%E9%93%BE%E8%B7%AF/index.html">
+<meta property="og:title" content="AFK2体验报告">
+<meta property="og:url" content="http://example.com/2024/09/03/%E5%B7%A5%E4%BD%9C24-AFK2%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/index.html">
 <meta property="og:site_name" content="ABA的缓存地">
-<meta property="og:description" content="序这一篇专栏是之前那篇《游戏设计的战术与战略》的下篇，同样作为一周年的总结性质的认知交流，将更聚焦于数值策划的相关内容，观点不一定对，还是以交流为主。 本文将从数值的设计源头讲起，以一种类似流水线一样的形式，讲讲我对数值内容产出这一条“流水线”上各个环节的思考，同时掺杂各种市面上的游戏做例子。 底层战略做任何游戏的数值，其起点一定是基于游戏立项时的底层战略，需要明确游戏的核心受众与需要向这批受众提">
+<meta property="og:description" content="本篇报告主要是首周的记录因为AFK2的付费框架与寻道有比较大的区别，因此本文的结构也与之前寻道的结构有一些区别，将围绕一些我个人感受到的比较值得注意的关键词来进行拓展 性价比 这个是目前整理出的游戏的大部分付费形式与对应的性价比，性价比从30到12这一段是比较陡的，里面很少有过度，感觉和他这个卡牌的数值框架有关系，可能就是需要去卡出两个层次来隔离。 直充 这个是统计的直充相关的内容，有两个点我比较">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/1.png">
-<meta property="og:image" content="http://example.com/2.png">
-<meta property="article:published_time" content="2024-08-12T14:25:14.000Z">
-<meta property="article:modified_time" content="2024-08-13T14:06:32.180Z">
+<meta property="og:image" content="http://example.com/1.jpg">
+<meta property="og:image" content="http://example.com/2.jpg">
+<meta property="og:image" content="http://example.com/3.jpg">
+<meta property="og:image" content="http://example.com/4.jpg">
+<meta property="article:published_time" content="2024-09-03T14:29:39.000Z">
+<meta property="article:modified_time" content="2024-09-03T14:39:33.106Z">
 <meta property="article:author" content="ABA">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/1.png">
+<meta name="twitter:image" content="http://example.com/1.jpg">
 
-<link rel="canonical" href="http://example.com/2024/08/12/%E5%B7%A5%E4%BD%9C24-%E6%95%B0%E5%80%BC%E7%AD%96%E5%88%92%E7%9A%84%E5%B7%A5%E4%BD%9C%E9%93%BE%E8%B7%AF/%E5%B7%A5%E4%BD%9C24-%E6%95%B0%E5%80%BC%E7%AD%96%E5%88%92%E7%9A%84%E5%B7%A5%E4%BD%9C%E9%93%BE%E8%B7%AF/">
+<link rel="canonical" href="http://example.com/2024/09/03/%E5%B7%A5%E4%BD%9C24-AFK2%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/">
 
 
 <script id="page-configurations">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>数值策划的工作链路 | ABA的缓存地</title>
+  <title>AFK2体验报告 | ABA的缓存地</title>
   
 
 
@@ -159,7 +161,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/12/%E5%B7%A5%E4%BD%9C24-%E6%95%B0%E5%80%BC%E7%AD%96%E5%88%92%E7%9A%84%E5%B7%A5%E4%BD%9C%E9%93%BE%E8%B7%AF/%E5%B7%A5%E4%BD%9C24-%E6%95%B0%E5%80%BC%E7%AD%96%E5%88%92%E7%9A%84%E5%B7%A5%E4%BD%9C%E9%93%BE%E8%B7%AF/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/03/%E5%B7%A5%E4%BD%9C24-AFK2%E4%BD%93%E9%AA%8C%E6%8A%A5%E5%91%8A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -172,7 +174,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          数值策划的工作链路
+          AFK2体验报告
         </h1>
 
         <div class="post-meta">
@@ -181,16 +183,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2024-08-12 22:25:14" itemprop="dateCreated datePublished" datetime="2024-08-12T22:25:14+08:00">2024-08-12</time>
+              <time title="创建时间：2024-09-03 22:29:39 / 修改时间：22:39:33" itemprop="dateCreated datePublished" datetime="2024-09-03T22:29:39+08:00">2024-09-03</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-13 22:06:32" itemprop="dateModified" datetime="2024-08-13T22:06:32+08:00">2024-08-13</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -212,23 +208,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><p>这一篇专栏是之前那篇《游戏设计的战术与战略》的下篇，同样作为一周年的总结性质的认知交流，将更聚焦于数值策划的相关内容，观点不一定对，还是以交流为主。</p>
-<p>本文将从数值的设计源头讲起，以一种类似流水线一样的形式，讲讲我对数值内容产出这一条“流水线”上各个环节的思考，同时掺杂各种市面上的游戏做例子。</p>
-<h1 id="底层战略"><a href="#底层战略" class="headerlink" title="底层战略"></a>底层战略</h1><p>做任何游戏的数值，其起点一定是基于游戏立项时的底层战略，需要明确游戏的核心受众与需要向这批受众提供的核心体验是什么，这块内容的确定在我的上一篇专栏里讲的比较多了，所以就不再做重新性的说明。</p>
-<h1 id="数值框架"><a href="#数值框架" class="headerlink" title="数值框架"></a>数值框架</h1><p>在明确了该游戏项目的底层战略逻辑后，就需要根据这个底层战略逻辑，制定一套对应的数值框架，他的主要步骤包括以下几个。</p>
-<h2 id="1-玩家层次划分"><a href="#1-玩家层次划分" class="headerlink" title="1.玩家层次划分"></a>1.玩家层次划分</h2><p>这块相对简单，主要是明确颗粒度：如果是买断制游戏，那就只需要一个层次就可以了，如果是服务型游戏，可能需要按照游戏类型进行一定的分层，一般比较通用的分层是分为活跃、标准、小R、中R、大R、超R六个层次。当然还是具体情况具体评估。</p>
-<h2 id="2-为不同层次的玩家定义付费额度"><a href="#2-为不同层次的玩家定义付费额度" class="headerlink" title="2.为不同层次的玩家定义付费额度"></a>2.为不同层次的玩家定义付费额度</h2><p>这个步骤有一定定价的含义在里面，如果是买断制游戏，就相当于给游戏整体定价了，BTW，写到这的时候突然想到买断制游戏，其实也可以分出一些档位，来额外出售一些资源，例如OST，特殊皮肤，提前解锁等等。</p>
-<p>如果是服务型游戏，那就是对各个层次的玩家在一定周期内的付费额度做一个定义。这个所谓的一个周期在不同游戏内应该有不同的定义，大部分游戏可能以月作为单位比较合适，而一些二游可能又以一个版本为周期比较合适。另一个要考虑的是付费上限做到哪儿合适（一个显然的事实是无限地在增加付费内容拉高付费上线非常愚蠢）。</p>
-<p>我们大致就可以得到这样一个表头：</p>
-<p><img src="/1.png" alt="1"></p>
-<p>而接下来的步骤则只针对服务型游戏了，买断制游戏的数值框架则不涉及到后续的内容。</p>
-<h2 id="3-核心资源投放量与性价比曲线"><a href="#3-核心资源投放量与性价比曲线" class="headerlink" title="3.核心资源投放量与性价比曲线"></a>3.核心资源投放量与性价比曲线</h2><p>确定了表头，我们就要继续向后拓展了，在明确了各个层次的玩家付费之后，我们自然而然的会有这样一个问题，那经过了这样的付费之后，玩家将得到多少的资源呢？<br>（这里的资源指的是什么？如果是数值驱动的mmo，那这里就是一种对养成资源的泛指，具体到不同资源可能有一定的差距。如果是抽卡驱动的二游，那这里就是指抽卡资源。）</p>
-<p>各个层次的玩家所获取的资源 &#x3D; 玩家的活跃产出 + f（玩家的付费额度）<br>其中f是一个函数，将玩家的付费额度映射到玩家的付费产出，该函数显然有以下性质：</p>
-<p>(1) f(0)&#x3D;0<br>(2) 严格单调递增</p>
-<p>但是显然这些性质都不是规划的关键，关键还是在与这个性价比曲线f到底是怎样的，以及这个性价比曲线是如何影响了游戏中的付费体验。这里我们举一些常见的例子来做参考。</p>
-<p>首先从相对简单的二游开始，就以《原神》来举例吧，这里摘取4.8版本的数据，数据来源是BV1yW421R7oP。</p>
-<p><img src="/2.png" alt="2"></p>
-<h1 id="子模块数值"><a href="#子模块数值" class="headerlink" title="子模块数值"></a>子模块数值</h1><h2 id="养成数值"><a href="#养成数值" class="headerlink" title="养成数值"></a>养成数值</h2><h2 id="玩法数值"><a href="#玩法数值" class="headerlink" title="玩法数值"></a>玩法数值</h2><h1 id="数值的执行"><a href="#数值的执行" class="headerlink" title="数值的执行"></a>数值的执行</h1><h1 id="其他辅助工作"><a href="#其他辅助工作" class="headerlink" title="其他辅助工作"></a>其他辅助工作</h1>
+        <p>本篇报告主要是首周的记录<br>因为AFK2的付费框架与寻道有比较大的区别，因此本文的结构也与之前寻道的结构有一些区别，将围绕一些我个人感受到的比较值得注意的关键词来进行拓展</p>
+<h1 id="性价比"><a href="#性价比" class="headerlink" title="性价比"></a>性价比</h1><p><img src="/1.jpg" alt="1"></p>
+<p>这个是目前整理出的游戏的大部分付费形式与对应的性价比，性价比从30到12这一段是比较陡的，里面很少有过度，感觉和他这个卡牌的数值框架有关系，可能就是需要去卡出两个层次来隔离。</p>
+<h1 id="直充"><a href="#直充" class="headerlink" title="直充"></a>直充</h1><p><img src="/2.jpg" alt="2"></p>
+<p>这个是统计的直充相关的内容，有两个点我比较在意：<br>①非整数的代币：一般来说游戏的代币和实际的人民币重置是一个比较好算的比例，大部分都是1：1或者1：10，但是《AFK2》很神奇的一点是他的人民币：黄钻是6：20，是一个很难计算的比例，会导致玩家对代币的实际价值产生模糊，当然这一点好还是不好就见仁见智了<br>②增长的性价比：另一个比较神奇的点是他充值黄钻是档位越高，性价比越高的，配合着游戏里面：低层次的付费主要是RMB的直购，只有某一个层次以上的形式才会转移到黄钻付费，所以也更刺激中大R一次大额付费。</p>
+<h1 id="限时礼包"><a href="#限时礼包" class="headerlink" title="限时礼包"></a>限时礼包</h1><p>AFK2的限时礼包在一些细节上我玩下来感觉设计得还是挺有心思的。<br>首先，AFK2的限时礼包大致分为两种<br>一种是面向小R中R层次的，用人民币进行直购，性价比在12倍：<br>    ①小R还不具有买<a href="%E4%BB%A3%E5%B8%81">龙焰晶</a>的行为，所以付费模式以[人民币]直购为主<br>    ②性价比上，从AFK2整体付费框架上看，是日常付费的最高性价比<br>    ③形式上，是那种买一次可以解锁几档的形式，并且会在最开始送几档，降低弹窗的厌恶感，并且一般有三档：6+6+30or6+18+30，感觉是为了做渐进的小额付费<br>    ④限时上，存在时间极长，应该有个4-5天，但是买完之后第二天应该是会再触发的<br>    ⑤投放内容上，基本上就是小R最关注的内容：钻石，抽奖券，升级材料等<br>另一种则是面向中R大R层次的，用龙焰晶进行直购，性价比在8倍<br>    ①鼓励中大R一次性购买更多的<a href="%E4%BB%A3%E5%B8%81">龙焰晶</a>，模糊实际付费额度<br>    ②性价比上，高于6.5倍的双周礼包，所以塑造出了一种奇怪的，玩家非常期待去触发限时礼包的情况<br>    ③形式上，是那种买一次可以解锁几档的形式，但是不会白送一两档奖励，并且付费只有一档，或者是两档一模一样的材料<br>        个人分析主要原因还是，白送的另外一个好处是，让玩家能够出接受这种顺畅的小额付费，但是这里面向中大R的礼包额度本身就很大，白送也达不到这个预期效果，所以不如不送<br>    ④真正限时，一般是两个小时，也是比较符合中大R厌恶损失的心理，而针对小R的礼包，小R不买就不买，也不会有什么感觉，所以不如一直留着<br>    ⑤投放内容上，基本就是集中在更高层次的系统，例如魔神抽卡，卡牌的进阶等等</p>
+<p>总结下来就是下图<br><img src="/3.jpg" alt="3"></p>
+<p>另外一些隐性的机制暂不清楚，不确定是不是和球球一样推送的礼包与玩家的日均付费额度有关。</p>
+<h1 id="BP"><a href="#BP" class="headerlink" title="BP"></a>BP</h1><p>AFK2中有两个档位的BP，基础信息如下：<br><img src="/4.jpg" alt="4"></p>
+<p>几个思考：<br>①层次更高的【魔法行礼】的价格更低，比较少见的情况，一方面猜测是最开始测试的时候定价更高，只是卖不动，所以降价了，另一方面可能是这个周期里不想投这么多专武升级材料，所以降价减投放，但是维持性价比<br>②BP持续的时间非常长，确实有一点理解到这个所谓的付费后置，因为里面核心的投放都不是在最开始几档，基本上都是玩家玩个一两周才会碰到的档位，因此玩家一开始买的动力确实不是那么足，但是过几天之后还是有一定动力的。但是这个也存疑，因为这个游戏的资源膨胀得有点快，感觉后期再为了资源去买也不是很现实，只能说为了一些核心资源，可能还是有付费动力的。</p>
+<h1 id="一些细节设计"><a href="#一些细节设计" class="headerlink" title="一些细节设计"></a>一些细节设计</h1><p>①红点的区分，[奖励红点]&gt;[大红点]&gt;[小红点]&gt;[新活动提示绿点]<br>②这个游戏应该是鼓励玩家优先关注T的，所以在战斗后的结算界面，也更多的在展示玩家的金牌坦克，这个点比较有意思<br>③小地图到大地图场景的直接切换，很丝滑</p>
+
     </div>
 
     
@@ -243,12 +234,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/07/21/%E9%A4%90%E5%8E%85-%E6%B7%B1%E5%9C%B32-%E5%90%B4-%E7%8E%B0%E4%BB%A3%E6%BD%AE%E8%8F%9C%EF%BC%88%E6%B7%B1%E5%9C%B3%E5%BA%97%EF%BC%89/" rel="prev" title="吴-现代潮菜（深圳店）">
-      <i class="fa fa-chevron-left"></i> 吴-现代潮菜（深圳店）
+    <a href="/2024/09/01/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E38-%E8%B7%83-Yue%E7%8E%B0%E4%BB%A3%E7%B2%A4%E8%8F%9C%E6%96%99%E7%90%86/" rel="prev" title="跃-Yue现代粤菜料理">
+      <i class="fa fa-chevron-left"></i> 跃-Yue现代粤菜料理
     </a></div>
       <div class="post-nav-item">
-    <a href="/2024/09/01/%E9%A4%90%E5%8E%85-%E5%B9%BF%E5%B7%9E37-%E5%88%A9%E8%8B%91%E9%85%92%E5%AE%B6%EF%BC%88%E7%8F%A0%E6%B1%9F%E6%96%B0%E5%9F%8E%E5%BA%97%EF%BC%89/" rel="next" title="餐厅-广州37-利苑酒家（珠江新城店）">
-      餐厅-广州37-利苑酒家（珠江新城店） <i class="fa fa-chevron-right"></i>
+    <a href="/2024/09/03/%E5%B7%A5%E4%BD%9C25-2407%E6%9C%88%E6%8A%A5/" rel="next" title="2407月报">
+      2407月报 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -308,7 +299,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%8F"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E6%88%98%E7%95%A5"><span class="nav-number">2.</span> <span class="nav-text">底层战略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E6%A1%86%E6%9E%B6"><span class="nav-number">3.</span> <span class="nav-text">数值框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%8E%A9%E5%AE%B6%E5%B1%82%E6%AC%A1%E5%88%92%E5%88%86"><span class="nav-number">3.1.</span> <span class="nav-text">1.玩家层次划分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%B8%BA%E4%B8%8D%E5%90%8C%E5%B1%82%E6%AC%A1%E7%9A%84%E7%8E%A9%E5%AE%B6%E5%AE%9A%E4%B9%89%E4%BB%98%E8%B4%B9%E9%A2%9D%E5%BA%A6"><span class="nav-number">3.2.</span> <span class="nav-text">2.为不同层次的玩家定义付费额度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%A0%B8%E5%BF%83%E8%B5%84%E6%BA%90%E6%8A%95%E6%94%BE%E9%87%8F%E4%B8%8E%E6%80%A7%E4%BB%B7%E6%AF%94%E6%9B%B2%E7%BA%BF"><span class="nav-number">3.3.</span> <span class="nav-text">3.核心资源投放量与性价比曲线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%90%E6%A8%A1%E5%9D%97%E6%95%B0%E5%80%BC"><span class="nav-number">4.</span> <span class="nav-text">子模块数值</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%BB%E6%88%90%E6%95%B0%E5%80%BC"><span class="nav-number">4.1.</span> <span class="nav-text">养成数值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%A9%E6%B3%95%E6%95%B0%E5%80%BC"><span class="nav-number">4.2.</span> <span class="nav-text">玩法数值</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E7%9A%84%E6%89%A7%E8%A1%8C"><span class="nav-number">5.</span> <span class="nav-text">数值的执行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E8%BE%85%E5%8A%A9%E5%B7%A5%E4%BD%9C"><span class="nav-number">6.</span> <span class="nav-text">其他辅助工作</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%A7%E4%BB%B7%E6%AF%94"><span class="nav-number">1.</span> <span class="nav-text">性价比</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%B4%E5%85%85"><span class="nav-number">2.</span> <span class="nav-text">直充</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%99%90%E6%97%B6%E7%A4%BC%E5%8C%85"><span class="nav-number">3.</span> <span class="nav-text">限时礼包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BP"><span class="nav-number">4.</span> <span class="nav-text">BP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%BB%86%E8%8A%82%E8%AE%BE%E8%AE%A1"><span class="nav-number">5.</span> <span class="nav-text">一些细节设计</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -324,7 +315,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">142</span>
+          <span class="site-state-item-count">144</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
